@@ -30,6 +30,7 @@ header{
     backdrop-filter: blur(3.1px);
     border-bottom: 1px solid rgb(0 0 0 / 32%);
     -webkit-backdrop-filter: blur(3.1px);
+    z-index: 999;
 }
 header nav{
     display: flex;
@@ -58,14 +59,30 @@ header nav ul li a{
     color: #fff;
     font-size: .7rem;
 }
+.hamburguer{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all .3s ease-in-out;
+    background-color: var(--body-text);
+}
 /*Hero*/
 .hero__section{
-    margin: 0 4rem;
-    height: 100vh;
     display: flex;
+    height: 100vh;
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+.hero__titles{
+    margin: 0 4rem;
 }
 .hero__section h2{
     font-size: 1.25rem;
@@ -78,6 +95,73 @@ header nav ul li a{
 .hero__section h1 sup{
     font-size: 3rem;
 }
+
+.hero__section .scroll{
+    width: 100%;
+    display: flex;
+}
+.hero__section .scroll div{
+    color: #fff;
+    font-size: 2.1rem;
+    background-color: var(--body-text);
+    color: var(--yellow);
+    white-space: nowrap;
+    will-change: transform;
+    animation: animate 32s linear infinite;
+
+}
+.scroll.text1 div{
+    background-color: var(--yellow);
+    color: var(--body-text);
+}
+.hero__section .scroll div:nth-child(2){
+    animation: animateTwo 32s linear infinite;
+
+}
+@keyframes animate{
+    from{transform: translateX(0);}
+    to{transform: translateX(-200%);}
+}
+@keyframes animateTwo{
+    from{transform: translateX(100%);}
+    to{transform: translateX(-100%);}
+}
+.hero__section .scroll.text1{
+    transform: rotate(-3.84deg) translate(-200%, 100%);
+}
+.hero__section .scroll.text2{
+    transform: rotate(3.84deg) translate(-100%,-50%);
+}
+
+/* .track {
+    white-space: nowrap;
+    will-change: transform;
+    font-size: 2.1rem;
+    background-color: var(--body-text);
+    width: fit-content;
+    color: var(--yellow);
+    animation: marquee 32s linear infinite;
+}
+
+@keyframes marquee {
+    from { transform: rotate(-3.84deg) translateX(0); }
+    to { transform: rotate(-3.84deg) translateX(-50%); }
+}
+
+.trackTwo {
+    white-space: nowrap;
+    will-change: transform;
+    font-size: 2.1rem;
+    background-color: var(--yellow);
+    width: fit-content;
+    color: var(--body-text);
+    animation: marqueeTwo 32s linear infinite;
+}
+
+@keyframes marqueeTwo {
+    from { transform: rotate(3.84deg) translateX(0) translateY(0);}
+    to { transform: rotate(3.84deg) translateX(-50%) translateY(-50%);}
+} */
 
 /*Qué hacemos*/
 
@@ -249,4 +333,124 @@ footer{
 .location__footer p{
     font-size: 1.1rem;
     text-align: right;
+}
+
+@media (max-width: 768px){
+    .hamburguer{
+        display: block;
+    }
+    .hamburguer.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburguer.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburguer.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    header{
+        display: flex;
+        justify-content: end;
+    }
+    header nav{
+        position: fixed;
+        left: -100%;
+        top: 62px;
+        gap: 0;
+        flex-direction: column;
+        transition: .3s;
+    }
+    header nav.active{
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    header nav div{
+        order: -1;
+        margin: 0 auto;
+    }
+    header nav ul{
+        flex-direction: column;
+    }
+    .hero__titles{
+        margin: 0;
+    }
+    .hero__section h1{
+        font-size: 3rem;
+    }
+    .hero__section h1 sup{
+        font-size: 1.5rem;
+    }
+    .hero__section h2{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .hacemos__section{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin: 3rem 0;
+    }
+    .hacemos__text-container{
+        align-items: center;
+    }
+    .hacemos__text-container h2{
+        font-size: 3rem;
+        text-align: center;
+    }
+    .hacemos__text-container p{
+        text-align: center;
+    }
+    .por-que__section{
+        grid-template-columns: 1fr;
+    }
+    .por-que__text-container{
+        order: -1;
+        align-items: center;
+    }
+    .por-que__text-container h2{
+        font-size: 3rem;
+        text-align: center;
+    }
+    .por-que__text-container p{
+        text-align: center;
+    }
+    .brand, .products, .sales{
+        height: auto;
+    }
+    .products{
+        border-top: solid 1px #000;
+        border-bottom: solid 1px #000;
+        border-right: none;
+        border-left: none;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact__footer{
+        gap: 1rem;
+    }
+    .contact__footer div{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact__footer a:nth-child(2), .contact__footer a:nth-child(3){
+        margin-left: 0;
+    }
+    .location__footer{
+        align-items: start;
+    }
+    .location__footer h4{
+        text-align: left;
+    }
+    .location__footer p{
+        text-align: left;
+    }
+    .copyrigth__footer{
+        order: 1;
+    }
 }
