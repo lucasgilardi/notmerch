@@ -20,6 +20,7 @@
 }
 body{
     font-family: 'NeueMachina';
+    color: var(--body-text);
 }
 header{
     padding: 1rem;
@@ -114,7 +115,7 @@ header nav ul li a{
     width: 80%;
 }
 
-/*Por qué*/
+/*Por qué nosotros*/
 .por-que__text-container{
     display: flex;
     flex-direction: column;
@@ -134,7 +135,8 @@ header nav ul li a{
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 1rem;
-    border: solid 1px #000;
+    border-top: solid 1px #000;
+    border-bottom: solid 1px #000;
 }
 .brand, .products, .sales{
     display: flex;
@@ -157,4 +159,94 @@ header nav ul li a{
 .products{
     border-right: solid 1px #000;
     border-left: solid 1px #000;
+}
+
+/*Calculadora*/
+.calculadora__section{
+    height: 16rem;
+    border-bottom: solid 1px #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+}
+.calculadora__section h2{
+    font-family: 'NeueMachinaBold';
+}
+.calculadora__btn{
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: 'NeueMachina';
+    cursor: pointer;
+}
+.calculadora__btn span{
+    text-decoration: underline;
+}
+
+/*Footer*/
+footer{
+    display: grid;
+    grid-template-columns: 1fr .5fr;
+    grid-template-rows: 16rem 4rem;
+    grid-template-areas: 
+        "contact location"
+        "copyright location";
+    border-bottom: solid 1px #000;
+}
+
+.contact__footer{
+    grid-area: contact;
+    border-right: solid 1px #000;
+    border-bottom: solid 1px #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+.contact__footer h3{
+    font-size: 2.25rem;
+}
+.contact__footer p{
+    font-size: 1.25rem;
+}
+.contact__footer a{
+    color: var(--body-text);
+    font-size: 1.4rem;
+}
+.contact__footer a:nth-child(2), .contact__footer a:nth-child(3){
+    margin-left: 1rem;
+}
+.copyrigth__footer{
+    grid-area: copyright;
+    border-right: solid 1px #000;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+.copyrigth__footer p{
+    font-size: .9rem;
+}
+.location__footer{
+    grid-area: location;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 3rem;
+    padding: 2rem;
+}
+.location__footer h4{
+    font-size: 1.6rem;
+    text-align: right;
+    font-weight: 400;
+}
+.location__footer p{
+    font-size: 1.1rem;
+    text-align: right;
 }
