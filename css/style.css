@@ -1,0 +1,160 @@
+:root {
+    --body-text: #303030;
+    --pink: #FF93EE;
+    --yellow: #EAFA89;
+  }
+
+@font-face{
+    font-family: 'NeueMachina';
+    src: url(../fonts/NeueMachina-InktrapRegular.otf);
+}
+@font-face{
+    font-family: 'NeueMachinaBold';
+    src: url(../fonts/NeueMachina-InktrapUltrabold.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'NeueMachina';
+}
+header{
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(3.1px);
+    border-bottom: 1px solid rgb(0 0 0 / 32%);
+    -webkit-backdrop-filter: blur(3.1px);
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 1rem;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: var(--body-text);
+    font-family: 'NeueMachinaBold';
+    font-size: .8rem;
+}
+
+.work__btn{
+    background-color: var(--pink);
+    border-radius: 1.8rem;
+    padding: .4rem 1rem;
+    color: #fff;
+    font-size: .7rem;
+}
+/*Hero*/
+.hero__section{
+    margin: 0 4rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+.hero__section h2{
+    font-size: 1.25rem;
+    text-align: center;
+}
+.hero__section h1{
+    font-size: 6rem;
+    text-align: center;
+}
+.hero__section h1 sup{
+    font-size: 3rem;
+}
+
+/*Qué hacemos*/
+
+.hacemos__section{
+    display: grid;
+    grid-template-columns: 1fr .8fr;
+    align-items: flex-start;
+    margin: 0 4rem;
+}
+.hacemos__text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.hacemos__text-container h2{
+    font-size: 6rem;
+}
+.hacemos__text-container p{
+    font-size: 1.25rem;
+}
+.hacemos__btn{
+    background-color: var(--body-text);
+    border-radius: 1.8rem;
+    width: fit-content;
+    padding: .4rem 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: .8rem;
+}
+.hacemos__img{
+    display: flex;
+    justify-content: center;
+}
+.hacemos__img img{
+    width: 80%;
+}
+
+/*Por qué*/
+.por-que__text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: end;
+}
+.por-que__text-container h2{
+    font-size: 6rem;
+    text-align: right;
+}
+.por-que__text-container p{
+    font-size: 1.25rem;
+    text-align: right;
+}
+.por-que__section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 1rem;
+    border: solid 1px #000;
+}
+.brand, .products, .sales{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 34rem;
+    padding: 1.5rem;
+}
+.brand img, .products img, .sales img{
+    width: 20%;
+}
+.brand h3, .products h3, .sales h3{
+    font-size: 1.75rem;
+}
+.brand p, .products p, .sales p{
+    font-size: 1.25rem;
+    width: 85%;
+}
+.products{
+    border-right: solid 1px #000;
+    border-left: solid 1px #000;
+}
