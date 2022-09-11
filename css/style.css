@@ -2,6 +2,13 @@
     --body-text: #303030;
     --pink: #FF93EE;
     --yellow: #EAFA89;
+
+    /*marquee*/
+    --marquee-width: 80vw;
+    --marquee-height: 8vh;
+    --marquee-elements-displayed: 5;
+    --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+    --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
   }
 
 @font-face{
@@ -97,71 +104,90 @@ header nav ul li a{
     font-size: 3rem;
 }
 
-.hero__section .scroll{
+.marquee {
     width: 100%;
+    height: var(--marquee-height);
+    background-color: var(--body-text);
+    color: var(--yellow);
+    overflow: hidden;
+    position: relative;
+    transform: rotate(2.69deg) translateY(80%);
+    z-index: 1;
+}
+.marquee:before, .marquee:after {
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+}
+.marquee-content {
+    list-style: none;
+    height: 100%;
     display: flex;
+    animation: scrolling var(--marquee-animation-duration) linear infinite;
 }
-.hero__section .scroll div{
-    color: #fff;
-    font-size: 2.1rem;
-    background-color: var(--body-text);
-    color: var(--yellow);
+@keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
+}
+.marquee-content li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    max-height: 100%;
+    font-size: 2rem; /* 5rem; */
     white-space: nowrap;
-    will-change: transform;
-    animation: animate 32s linear infinite;
-
+    margin-left: 1rem;
 }
-.scroll.text1 div{
+
+.marqueeTwo {
+    width: 100%;
+    height: var(--marquee-height);
     background-color: var(--yellow);
     color: var(--body-text);
+    overflow: hidden;
+    position: relative;
+    transform: rotate(-2.69deg) translateY(-50%);
 }
-.hero__section .scroll div:nth-child(2){
-    animation: animateTwo 32s linear infinite;
-
+.marqueeTwo:before, .marqueeTwo:after {
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
 }
-@keyframes animate{
-    from{transform: translateX(0);}
-    to{transform: translateX(-200%);}
+.marquee-contentTwo {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    animation: scrolling var(--marquee-animation-duration) linear infinite;
 }
-@keyframes animateTwo{
-    from{transform: translateX(100%);}
-    to{transform: translateX(-100%);}
+@keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
 }
-.hero__section .scroll.text1{
-    transform: rotate(-3.84deg) translate(-200%, 100%);
-}
-.hero__section .scroll.text2{
-    transform: rotate(3.84deg) translate(-100%,-50%);
-}
-
-/* .track {
+.marquee-contentTwo li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    max-height: 100%;
+    font-size: 2rem; /* 5rem; */
     white-space: nowrap;
-    will-change: transform;
-    font-size: 2.1rem;
-    background-color: var(--body-text);
-    width: fit-content;
-    color: var(--yellow);
-    animation: marquee 32s linear infinite;
+    margin-left: 1rem;
 }
-
-@keyframes marquee {
-    from { transform: rotate(-3.84deg) translateX(0); }
-    to { transform: rotate(-3.84deg) translateX(-50%); }
+/* @media (max-width: 600px) {
+    html { font-size: 12px; }
+    :root {
+        --marquee-width: 100vw;
+        --marquee-height: 16vh;
+        --marquee-elements-displayed: 3;
 }
-
-.trackTwo {
-    white-space: nowrap;
-    will-change: transform;
-    font-size: 2.1rem;
-    background-color: var(--yellow);
-    width: fit-content;
-    color: var(--body-text);
-    animation: marqueeTwo 32s linear infinite;
-}
-
-@keyframes marqueeTwo {
-    from { transform: rotate(3.84deg) translateX(0) translateY(0);}
-    to { transform: rotate(3.84deg) translateX(-50%) translateY(-50%);}
+.marquee:before, .marquee:after { width: 5rem; }
 } */
 
 /*Qué hacemos*/
@@ -512,6 +538,12 @@ footer{
     .hero__section h2{
         font-size: 1rem;
         text-align: center;
+    }
+    .marquee-content li{
+        font-size: 1rem;
+    }
+    .marquee-contentTwo li{
+        font-size: 1rem;
     }
     .hacemos__section{
         display: flex;
