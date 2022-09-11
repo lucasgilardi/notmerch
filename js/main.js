@@ -28,3 +28,25 @@ punto.forEach ( (p, i) =>{
         punto[i].classList.add('activo');
     })
 })
+
+//Modal calculadora
+const modalViews = document.querySelectorAll(".calculadora__modal");
+const modalBtns = document.querySelectorAll(".calculadora__btn");
+const modalCloses = document.querySelectorAll(".calculadora__modal-close");
+
+let modal = function(modalClick){
+    modalViews[modalClick].classList.add("active-modal");
+}
+
+modalBtns.forEach((modalBtn, i) =>{
+    modalBtn.addEventListener("click", () =>{
+        modal(i);
+    });
+});
+modalCloses.forEach((modalClose) =>{
+    modalClose.addEventListener("click", () =>{
+        modalViews.forEach((modalView) =>{
+            modalView.classList.remove("active-modal");
+        });
+    });
+});
