@@ -21,6 +21,7 @@
 body{
     font-family: 'NeueMachina';
     color: var(--body-text);
+    overflow-x: hidden;
 }
 header{
     padding: 1rem;
@@ -199,6 +200,87 @@ header nav ul li a{
     width: 80%;
 }
 
+/*Experiencia*/
+.experiencia__section{
+    margin: 4rem 0;
+}
+.experiencia__section h2{
+    font-size: 48px;
+    margin: 0 4rem;
+}
+.carousel{
+    max-width: 120rem;
+    padding: 2rem;
+}
+.carousel .grande{
+    width: 200%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    transition: all .5s ease;
+    transform: translateX(0%);
+}
+.carousel img{
+    width: 100%;
+    border-radius: 2.8rem;
+}
+.carousel .puntos{
+    width: 100%;
+    padding: .4rem;
+    margin: 1rem 0 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.carousel .punto{
+    width: 2.25rem;
+    height: 0.25rem;
+    background-color: #5c5c5c;
+    margin: .2rem;
+    border-radius: 0.1rem;
+}
+
+.carousel .punto.activo{
+    background-color: var(--body-text);
+}
+
+.overlay {
+    width: 19.25%;
+    height: 100%;
+    background: linear-gradient(0deg, #EAFA89 0%, rgba(234, 250, 137, 0) 100%);
+    opacity: 0;
+    transform: translate(0%, -100%);
+    transition: .5s ease;
+    z-index: 1;
+    position: absolute;
+    border-radius: 2.8rem;
+}
+.carousel__container:hover .overlay {
+    opacity: 1;
+} 
+.overlay__title{
+    color: #000;
+    font-size: 1.8rem;
+    text-align: center;
+    position: absolute;
+    bottom: 16%;
+    right: 18%;
+    width: 100%;
+}
+.overlay__description{
+    color: #000;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 9%;
+    right: 29%;
+}
 /*Por qué nosotros*/
 .por-que__text-container{
     display: flex;
