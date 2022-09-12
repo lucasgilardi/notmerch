@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/1bb6d48af2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
     <title>Notmerch</title>
 </head>
@@ -46,7 +47,6 @@
                   <li>🤘🏼 THE WAY YOU LIKE IT</li>
                 </ul>
             </div>
-
             <div class="marqueeTwo">
                 <ul class="marquee-contentTwo">
                   <li>🤘🏼 YOUR BRAND</li>
@@ -73,7 +73,7 @@
 
         <section class="experiencia__section">
             <h2>NUESTRA EXPERIENCIA</h2>
-            <div class="carousel">
+            <!-- <div class="carousel">
                 <div class="grande">
                     <div class="carousel__container">
                         <img src="img/nigiri-squad.jpg" alt="">
@@ -102,7 +102,42 @@
                     <li class="punto"></li>
                     <li class="punto"></li>
                 </ul>
-            </div>
+            </div> -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="img/nigiri-squad.jpg" alt="">
+                    <div class="overlay">
+                        <div class="overlay__text-container">
+                            <h3 class="overlay__title">Nigiri Squad</h3>
+                            <p class="overlay__description">Youtuber</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/merakio.jpg" alt="">
+                    <div class="overlay">
+                        <div class="overlay__text-container">
+                            <h3 class="overlay__title">Merakio</h3>
+                            <p class="overlay__description">Youtuber</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/mica-suarez.jpg" alt="">
+                    <div class="overlay">
+                        <div class="overlay__text-container">
+                            <h3 class="overlay__title">Mica Suarez</h3>
+                            <p class="overlay__description">Youtuber</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">Slide 4</div>
+                  <div class="swiper-slide">Slide 5</div>
+                  <div class="swiper-slide">Slide 6</div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
         </section>
 
         <section class="hacemos__section">
@@ -175,6 +210,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
