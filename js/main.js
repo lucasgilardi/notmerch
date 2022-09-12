@@ -29,6 +29,17 @@ punto.forEach ( (p, i) =>{
     })
 })
 
+//swiper
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    freeMode: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
 //Modal calculadora
 const modalViews = document.querySelectorAll(".calculadora__modal");
 const modalBtns = document.querySelectorAll(".calculadora__btn");
@@ -56,16 +67,13 @@ const root = document.documentElement;
 const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
 const marqueeContent = document.querySelector("ul.marquee-content");
 
-//agregado
-const marqueeContentTwo = document.querySelector("ul.marquee-contentTwo");
-
 root.style.setProperty("--marquee-elements", marqueeContent.children.length);
 
 for(let i=0; i<marqueeElementsDisplayed; i++) {
   marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
 }
 
-//agregado
+const marqueeContentTwo = document.querySelector("ul.marquee-contentTwo");
 for(let i=0; i<marqueeElementsDisplayed; i++) {
   marqueeContentTwo.appendChild(marqueeContentTwo.children[i].cloneNode(true));
 }

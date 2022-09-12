@@ -1,10 +1,15 @@
 :root {
+    /* Colors */
     --body-text: #303030;
     --pink: #FF93EE;
     --yellow: #EAFA89;
 
-    /*marquee*/
-    --marquee-width: 80vw;
+    /*Fonts*/
+    --titles-font: ;
+    --text-font: ;
+    
+    /*Marquee*/
+    --marquee-width: 100%;
     --marquee-height: 8vh;
     --marquee-elements-displayed: 5;
     --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
@@ -138,7 +143,7 @@ header nav ul li a{
     align-items: center;
     flex-shrink: 0;
     max-height: 100%;
-    font-size: 2rem; /* 5rem; */
+    font-size: 2rem;
     white-space: nowrap;
     margin-left: 1rem;
 }
@@ -176,19 +181,10 @@ header nav ul li a{
     align-items: center;
     flex-shrink: 0;
     max-height: 100%;
-    font-size: 2rem; /* 5rem; */
+    font-size: 2rem;
     white-space: nowrap;
     margin-left: 1rem;
 }
-/* @media (max-width: 600px) {
-    html { font-size: 12px; }
-    :root {
-        --marquee-width: 100vw;
-        --marquee-height: 16vh;
-        --marquee-elements-displayed: 3;
-}
-.marquee:before, .marquee:after { width: 5rem; }
-} */
 
 /*Qué hacemos*/
 
@@ -275,38 +271,65 @@ header nav ul li a{
 .carousel .punto.activo{
     background-color: var(--body-text);
 }
-
+/*swiper*/
+.swiper{
+    width: 100%;
+    height: 100%;
+    margin: 4rem;
+}
+.swiper-slide{
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2.8rem;
+}
+.swiper-pagination{
+    position: unset;
+    margin-top: 2rem;
+}
+.swiper-pagination span{
+    width: 2.25rem;
+    height: 0.25rem;
+    background-color: #5c5c5c;
+    margin: 0.2rem;
+    border-radius: 0.1rem;
+}
 .overlay {
-    width: 19.25%;
+    width: 100%;
     height: 100%;
     background: linear-gradient(0deg, #EAFA89 0%, rgba(234, 250, 137, 0) 100%);
     opacity: 0;
-    transform: translate(0%, -100%);
     transition: .5s ease;
     z-index: 1;
     position: absolute;
     border-radius: 2.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
 }
-.carousel__container:hover .overlay {
+.swiper-slide:hover .overlay {
     opacity: 1;
 } 
 .overlay__title{
-    color: #000;
     font-size: 1.8rem;
-    text-align: center;
-    position: absolute;
-    bottom: 16%;
-    right: 18%;
-    width: 100%;
+    text-align: left;
 }
 .overlay__description{
-    color: #000;
     font-size: 1.5rem;
-    text-align: center;
-    width: 100%;
-    position: absolute;
-    bottom: 9%;
-    right: 29%;
+    text-align: left;
+}
+.overlay__text-container{
+    margin: 0 0 1.5rem 1.5rem;
 }
 /*Por qué nosotros*/
 .por-que__text-container{
@@ -619,4 +642,13 @@ footer{
     .copyrigth__footer{
         order: 1;
     }
+}
+@media (max-width: 576px){
+    .swiper{
+        margin: 2rem auto;
+        width: 80%;
+    }
+    /* .swiper-slide{
+        width: 100%!important;
+    } */
 }
