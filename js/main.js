@@ -13,31 +13,42 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
 }));
 
 //Carousel experiencia
-const grande = document.querySelector(".grande");
-const punto = document.querySelectorAll(".punto");
+// const grande = document.querySelector(".grande");
+// const punto = document.querySelectorAll(".punto");
 
-punto.forEach ( (p, i) =>{
-    punto[i].addEventListener("click", () =>{
-        let posicion = i;
-        let operacion = posicion * -50;
-        grande.style.transform = `translateX(${ operacion }%)`
+// punto.forEach ( (p, i) =>{
+//     punto[i].addEventListener("click", () =>{
+//         let posicion = i;
+//         let operacion = posicion * -50;
+//         grande.style.transform = `translateX(${ operacion }%)`
 
-        punto.forEach((p, i) => {
-            punto[i].classList.remove('activo');
-        })
-        punto[i].classList.add('activo');
-    })
-})
+//         punto.forEach((p, i) => {
+//             punto[i].classList.remove('activo');
+//         })
+//         punto[i].classList.add('activo');
+//     })
+// })
 
 //swiper
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
+const swiper = new Swiper(".mySwiper", {
+    //slidesPerView: 3,
     spaceBetween: 30,
     freeMode: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
+    breakpoints: {
+        576: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 3,
+        },
+        1024: {
+            slidesPerView: 3,
+        }
+    }
   });
 
 //Modal calculadora
