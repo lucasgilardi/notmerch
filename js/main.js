@@ -12,6 +12,24 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
     navMenu.classList.remove("active");
 }));
 
+//Tabs servicios
+const btn = document.querySelectorAll('.servicios__btn-tab');
+const tab = document.querySelectorAll('.servicios__tab');
+const icon = document.querySelectorAll('.icon');
+
+btn.forEach( (eachBtn, i) =>{
+    btn[i].addEventListener('click', ()=>{
+        btn.forEach( (eachBtn, i)=>{
+            btn[i].classList.remove('active-btn');
+            tab[i].classList.remove('active-tab');
+            icon[i].classList.remove('show-icon');
+        })
+        btn[i].classList.add('active-btn');
+        tab[i].classList.add('active-tab');
+        icon[i].classList.add('show-icon');
+    })
+})
+
 //Carousel experiencia
 // const grande = document.querySelector(".grande");
 // const punto = document.querySelectorAll(".punto");

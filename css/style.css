@@ -18,11 +18,11 @@
 
 @font-face{
     font-family: 'NeueMachina';
-    src: url(../fonts/NeueMachina-InktrapRegular.otf);
+    src: url(../fonts/NeueMachina-Regular.ttf);
 }
 @font-face{
-    font-family: 'NeueMachinaBold';
-    src: url(../fonts/NeueMachina-InktrapUltrabold.otf);
+    font-family: 'HeadingNow';
+    src: url(../fonts/HeadingNow-96Bold.otf);
 }
 
 *{
@@ -32,8 +32,8 @@
 }
 body{
     font-family: 'NeueMachina';
+    background-color: #FFF7DE;
     color: var(--body-text);
-    overflow-x: hidden;
 }
 header{
     padding: 1rem;
@@ -64,8 +64,9 @@ header nav ul{
 header nav ul li a{
     text-decoration: none;
     color: var(--body-text);
-    font-family: 'NeueMachinaBold';
+    font-family: 'NeueMachina';
     font-size: .8rem;
+    font-weight: 600;
 }
 
 .work__btn{
@@ -105,11 +106,17 @@ header nav ul li a{
     text-align: center;
 }
 .hero__section h1{
-    font-size: 6rem;
+    font-size: 6.5rem;
     text-align: center;
+    font-family: 'HeadingNow';
+    line-height: .8;
+}
+.hero__section h1 .hero__title-size{
+    font-size: 10.5rem;
 }
 .hero__section h1 sup{
     font-size: 3rem;
+    margin-left: -4rem;
 }
 
 .marquee {
@@ -203,7 +210,8 @@ header nav ul li a{
     gap: 2rem;
 }
 .hacemos__text-container h2{
-    font-size: 6rem;
+    font-size: 3rem;
+    font-family: 'HeadingNow';
 }
 .hacemos__text-container p{
     font-size: 1.25rem;
@@ -222,7 +230,86 @@ header nav ul li a{
     justify-content: center;
 }
 .hacemos__img img{
-    width: 80%;
+    width: 100%;
+}
+
+/*Servicios*/
+.servicios__section{
+    margin: 2rem 4rem;
+}
+.servicios__section h2{
+    font-size: 3rem;
+    font-family: 'HeadingNow';
+}
+.servicios__container{
+    display: flex;
+    gap: 6rem;
+    margin: 2rem 0;
+}
+.servicios__btn-tabs{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.8rem;
+}
+.servicios__btn-tab{
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .5s ease;
+    padding: 0.6rem;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.servicios__btn-tab.active-btn{
+    border: solid 1px #000;
+    width: 13rem;
+    padding: 0.6rem;
+    border-radius: 5rem;
+    font-size: 1.3rem;
+}
+.servicios__btn-tab .icon{
+    width: 15%;
+    display: none;
+}
+.servicios__btn-tab .show-icon{
+    display: block;
+}
+.servicios__tabs{
+    position: relative;
+    min-height: 30rem;
+    width: 100%;
+}
+.servicios__tab{
+    background: linear-gradient(180deg, rgba(217, 217, 217, 0.35) 0%, rgba(217, 217, 217, 0) 100%);
+    backdrop-filter: blur(15px);
+    border-radius: 5.6rem 5.6rem 0 0 ;
+    height: 30rem;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: all .5s ease;
+}
+.servicios__tab img{
+    width: 15%;
+}
+.servicios__tab h3{
+    font-size: 2.3rem;
+    font-family: 'HeadingNow';
+}
+.servicios__tab p{
+    font-size: 1.25rem;
+}
+.servicios__tab.active-tab{
+    opacity: 1;
 }
 
 /*Experiencia*/
@@ -231,7 +318,8 @@ header nav ul li a{
     overflow-x: hidden;
 }
 .experiencia__section h2{
-    font-size: 48px;
+    font-size: 3rem;
+    font-family: 'HeadingNow';
     margin: 0 4rem;
 }
 /* .carousel{
@@ -344,7 +432,8 @@ header nav ul li a{
     margin: 2rem 0;
 }
 .por-que__text-container h2{
-    font-size: 6rem;
+    font-size: 3rem;
+    font-family: 'HeadingNow';
     text-align: right;
 }
 .por-que__text-container p{
@@ -394,7 +483,10 @@ header nav ul li a{
     text-align: center;
 }
 .calculadora__section h2{
-    font-family: 'NeueMachinaBold';
+    font-family: 'NeueMachina';
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1;
 }
 .calculadora__btn{
     background-color: var(--yellow);
@@ -513,6 +605,12 @@ footer{
     text-align: right;
 }
 
+
+.fa-chevron-down{
+    display: none;
+}
+
+
 @media (max-width: 768px){
     .hamburguer{
         display: block;
@@ -572,8 +670,17 @@ footer{
     .hero__section h1{
         font-size: 3rem;
     }
+    .hero__section h1 .hero__title-size {
+        font-size: 3rem;
+    }
     .hero__section h1 sup{
         font-size: 1.5rem;
+        margin-left: -1rem;
+    }
+    .mobile-break{
+        display: block;
+        font-size: 5.5rem;
+        margin-bottom: -2rem;
     }
     .hero__section h2{
         font-size: 1rem;
@@ -596,10 +703,35 @@ footer{
     }
     .hacemos__text-container h2{
         font-size: 3rem;
-        text-align: center;
+        text-align: left;
     }
     .hacemos__text-container p{
+        text-align: left;
+    }
+    .servicios__section{
+        margin: 2rem 1rem;
+    }
+    .servicios__section h2{
+        font-size: 3rem;
         text-align: center;
+    }
+    .servicios__container{
+        flex-direction: column;
+    }
+    .servicios__btn-tab.active-btn{
+        border: none;
+    }
+    /* .servicios__btn-tab:not(:first-child){
+        display: none;
+    }
+    .servicios__btn-tabs:hover .servicios__btn-tab{
+        display: flex;
+    } */
+    .servicios__btn-tab.active-btn{
+        width: 16rem;
+    }
+    .fa-chevron-down{
+        display: block;
     }
     .experiencia__section h2{
         font-size: 3rem;
@@ -663,9 +795,21 @@ footer{
     }
 }
 @media (max-width: 576px){
+    .hacemos__text-container h2{
+        font-size: 2rem;
+    }
+    .servicios__section h2{
+        font-size: 2rem;
+    }
+    .experiencia__section h2{
+        font-size: 2rem;
+    }
     .swiper{
         margin: 2rem auto;
         width: 80%;
+    }
+    .por-que__text-container h2{
+        font-size: 2rem;
     }
     /* .swiper-slide{
         width: 100%!important;
