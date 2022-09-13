@@ -18,11 +18,11 @@
 
 @font-face{
     font-family: 'NeueMachina';
-    src: url(../fonts/NeueMachina-Regular.ttf);
+    src: url(../assets/fonts/NeueMachina-Regular.ttf);
 }
 @font-face{
     font-family: 'HeadingNow';
-    src: url(../fonts/HeadingNow-96Bold.otf);
+    src: url(../assets/fonts/HeadingNow-96Bold.otf);
 }
 
 *{
@@ -372,7 +372,6 @@ header nav ul li a{
 .swiper-slide{
     text-align: center;
     font-size: 18px;
-    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -721,12 +720,18 @@ footer{
     .servicios__btn-tab.active-btn{
         border: none;
     }
-    /* .servicios__btn-tab:not(:first-child){
+    .servicios__btn-tab:not(:first-child){
         display: none;
     }
     .servicios__btn-tabs:hover .servicios__btn-tab{
         display: flex;
-    } */
+    }
+    .fa-chevron-down{
+        opacity: 0;
+    }
+    .fa-chevron-down.active-icon{
+        opacity: 1;
+    }
     .servicios__btn-tab.active-btn{
         width: 16rem;
     }

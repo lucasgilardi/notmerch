@@ -12,6 +12,22 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
     navMenu.classList.remove("active");
 }));
 
+//Marquee
+const root = document.documentElement;
+const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+const marqueeContent = document.querySelector("ul.marquee-content");
+
+root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+for(let i=0; i<marqueeElementsDisplayed; i++) {
+  marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+}
+
+const marqueeContentTwo = document.querySelector("ul.marquee-contentTwo");
+for(let i=0; i<marqueeElementsDisplayed; i++) {
+  marqueeContentTwo.appendChild(marqueeContentTwo.children[i].cloneNode(true));
+}
+
 //Tabs servicios
 const btn = document.querySelectorAll('.servicios__btn-tab');
 const tab = document.querySelectorAll('.servicios__tab');
@@ -29,23 +45,6 @@ btn.forEach( (eachBtn, i) =>{
         icon[i].classList.add('show-icon');
     })
 })
-
-//Carousel experiencia
-// const grande = document.querySelector(".grande");
-// const punto = document.querySelectorAll(".punto");
-
-// punto.forEach ( (p, i) =>{
-//     punto[i].addEventListener("click", () =>{
-//         let posicion = i;
-//         let operacion = posicion * -50;
-//         grande.style.transform = `translateX(${ operacion }%)`
-
-//         punto.forEach((p, i) => {
-//             punto[i].classList.remove('activo');
-//         })
-//         punto[i].classList.add('activo');
-//     })
-// })
 
 //swiper
 const swiper = new Swiper(".mySwiper", {
@@ -91,18 +90,3 @@ modalCloses.forEach((modalClose) =>{
     });
 });
 
-//Marquee
-const root = document.documentElement;
-const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
-const marqueeContent = document.querySelector("ul.marquee-content");
-
-root.style.setProperty("--marquee-elements", marqueeContent.children.length);
-
-for(let i=0; i<marqueeElementsDisplayed; i++) {
-  marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
-}
-
-const marqueeContentTwo = document.querySelector("ul.marquee-contentTwo");
-for(let i=0; i<marqueeElementsDisplayed; i++) {
-  marqueeContentTwo.appendChild(marqueeContentTwo.children[i].cloneNode(true));
-}
