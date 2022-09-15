@@ -29,9 +29,11 @@ for(let i=0; i<marqueeElementsDisplayed; i++) {
 }
 
 //Tabs servicios
+const btnTab = document.querySelector(".servicios__btn-tabs");
 const btn = document.querySelectorAll('.servicios__btn-tab');
 const tab = document.querySelectorAll('.servicios__tab');
 const icon = document.querySelectorAll('.icon');
+const selected = document.querySelector(".selected");
 
 btn.forEach( (eachBtn, i) =>{
     btn[i].addEventListener('click', ()=>{
@@ -45,6 +47,20 @@ btn.forEach( (eachBtn, i) =>{
         icon[i].classList.add('show-icon');
     })
 })
+
+//Tabs responsive
+selected.addEventListener("click", () => {
+    btnTab.classList.toggle("active");
+  });
+  
+  btn.forEach( (eachBtn, i) => {
+      btn[i].addEventListener("click", () => {
+          const element = btn[i];
+          selected.innerHTML = `${element.innerHTML}`
+          btnTab.classList.remove("active");
+      });
+  });
+  
 
 //swiper
 const swiper = new Swiper(".mySwiper", {

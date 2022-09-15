@@ -29,6 +29,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body{
     font-family: 'NeueMachina';
@@ -40,9 +41,9 @@ header{
     position: sticky;
     top: 0;
     background: rgba(255, 255, 255, 0.22);
-    backdrop-filter: blur(3.1px);
+    backdrop-filter: blur(4px);
     border-bottom: 1px solid rgb(0 0 0 / 32%);
-    -webkit-backdrop-filter: blur(3.1px);
+    -webkit-backdrop-filter: blur(4px);
     z-index: 999;
 }
 header .logo{
@@ -66,7 +67,7 @@ header nav ul li a{
     color: var(--body-text);
     font-family: 'NeueMachina';
     font-size: .8rem;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 .work__btn{
@@ -75,6 +76,10 @@ header nav ul li a{
     padding: .6rem 1rem;
     color: #fff;
     font-size: .8rem;
+    border: 1px solid #000;
+}
+.fa-arrow-right-long{
+    margin-left: .5rem;
 }
 .hamburguer{
     display: none;
@@ -118,7 +123,35 @@ header nav ul li a{
     font-size: 3rem;
     margin-left: -4rem;
 }
-
+.scroll-downs {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+.mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid var(--body-text);
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+}
+.scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: var(--body-text);
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+    animation-iteration-count: infinite;
+}
+@keyframes scroll {
+    0% { opacity: 0; }
+    10% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0;}
+}
 .marquee {
     width: 100%;
     height: var(--marquee-height);
@@ -217,13 +250,15 @@ header nav ul li a{
     font-size: 1.25rem;
 }
 .hacemos__btn{
-    background-color: var(--body-text);
+    background-color: #fff;
     border-radius: 1.8rem;
+    border: 1px solid #000;
     width: fit-content;
     padding: .6rem 1.3rem;
-    color: #fff;
+    color: var(--body-text);
     text-decoration: none;
     font-size: .8rem;
+    font-weight: bold;
 }
 .hacemos__img{
     display: flex;
@@ -311,6 +346,12 @@ header nav ul li a{
 .servicios__tab.active-tab{
     opacity: 1;
 }
+.container{
+    display: none;
+}
+.selected{
+    display: none;
+}
 
 /*Experiencia*/
 .experiencia__section{
@@ -322,47 +363,6 @@ header nav ul li a{
     font-family: 'HeadingNow';
     margin: 0 4rem;
 }
-/* .carousel{
-    max-width: 120rem;
-    padding: 2rem;
-    overflow-x: hidden;
-}
-.carousel .grande{
-    width: 200%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 2rem;
-    transition: all .5s ease;
-    transform: translateX(0%);
-}
-.carousel img{
-    width: 100%;
-    border-radius: 2.8rem;
-}
-.carousel .puntos{
-    width: 100%;
-    padding: .4rem;
-    margin: 1rem 0 0;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-}
-.carousel .punto{
-    width: 2.25rem;
-    height: 0.25rem;
-    background-color: #5c5c5c;
-    margin: .2rem;
-    border-radius: 0.1rem;
-}
-
-.carousel .punto.activo{
-    background-color: var(--body-text);
-} */
 /*swiper*/
 .swiper{
     width: 100%;
@@ -438,6 +438,11 @@ header nav ul li a{
 .por-que__text-container p{
     font-size: 1.25rem;
     text-align: right;
+}
+.por-que__btn{
+    background-color: var(--body-text);
+    color: #fff;
+    border: 1px solid #fff;
 }
 .por-que__section{
     display: grid;
@@ -604,12 +609,6 @@ footer{
     text-align: right;
 }
 
-
-.fa-chevron-down{
-    display: none;
-}
-
-
 @media (max-width: 768px){
     .hamburguer{
         display: block;
@@ -716,27 +715,54 @@ footer{
     }
     .servicios__container{
         flex-direction: column;
+        gap: 2rem;
+    }
+    .servicios__tab{
+        padding: 1rem 3rem;
+    }
+    .servicios__tab h3{
+        font-size: 1.5rem;
     }
     .servicios__btn-tab.active-btn{
         border: none;
     }
-    .servicios__btn-tab:not(:first-child){
-        display: none;
-    }
-    .servicios__btn-tabs:hover .servicios__btn-tab{
-        display: flex;
-    }
-    .fa-chevron-down{
-        opacity: 0;
-    }
-    .fa-chevron-down.active-icon{
-        opacity: 1;
-    }
     .servicios__btn-tab.active-btn{
         width: 16rem;
     }
-    .fa-chevron-down{
+    .servicios__btn-tabs{
+        display: none;
+    }
+    .servicios__btn-tabs.active{
         display: block;
+        margin: 0 2rem;
+    }
+    .servicios__btn-tab.active-btn{
+        font-size: 1.1rem;
+    }
+    .icon{
+        width: 20%;
+    }
+    .selected {
+        order: -1;
+        width: 14rem;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 2rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    .selected::after {
+        content: "";
+        background: url("../assets/icons/angle-down.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 1.5rem;
+        height: 1.5rem;
+        transition: all 0.4s;
+    }
+    .servicios__btn-tabs.active + .selected::after {
+        transform: rotateX(180deg);
+        top: -6px;
     }
     .experiencia__section h2{
         font-size: 3rem;
