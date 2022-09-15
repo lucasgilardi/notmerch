@@ -1,39 +1,51 @@
 //Menu hamburguesa
-const hamburguer = document.querySelector(".hamburguer");
-const navMenu = document.querySelector(".nav");
+const hamburguer = document.querySelector('.hamburguer');
+const navMenu = document.querySelector('.nav');
+const header = document.querySelector('.header');
+const logo = document.querySelector('.header__logo-mobile');
 
-hamburguer.addEventListener("click", () =>{
-    hamburguer.classList.toggle("active");
-    navMenu.classList.toggle("active");
+hamburguer.addEventListener('click', () =>{
+    hamburguer.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    
+    if(hamburguer.classList.contains('active')){
+        header.style.backgroundColor = '#161616';
+        logo.src = 'assets/img/logo-white.png';
+    }else{
+        header.style.backgroundColor = 'unset';
+        logo.src = 'assets/img/logo.png';
+    }
 });
 
-document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () =>{
-    hamburguer.classList.remove("active");
-    navMenu.classList.remove("active");
+document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () =>{
+    hamburguer.classList.remove('active');
+    navMenu.classList.remove('active');
+    header.style.backgroundColor = 'unset';
+    logo.src = 'assets/img/logo.png';
 }));
 
 //Marquee
 const root = document.documentElement;
-const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
-const marqueeContent = document.querySelector("ul.marquee-content");
+const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue('--marquee-elements-displayed');
+const marqueeContent = document.querySelector('ul.marquee-content');
 
-root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+root.style.setProperty('--marquee-elements', marqueeContent.children.length);
 
 for(let i=0; i<marqueeElementsDisplayed; i++) {
   marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
 }
 
-const marqueeContentTwo = document.querySelector("ul.marquee-contentTwo");
+const marqueeContentTwo = document.querySelector('ul.marquee-contentTwo');
 for(let i=0; i<marqueeElementsDisplayed; i++) {
   marqueeContentTwo.appendChild(marqueeContentTwo.children[i].cloneNode(true));
 }
 
 //Tabs servicios
-const btnTab = document.querySelector(".servicios__btn-tabs");
+const btnTab = document.querySelector('.servicios__btn-tabs');
 const btn = document.querySelectorAll('.servicios__btn-tab');
 const tab = document.querySelectorAll('.servicios__tab');
 const icon = document.querySelectorAll('.icon');
-const selected = document.querySelector(".selected");
+const selected = document.querySelector('.selected');
 
 btn.forEach( (eachBtn, i) =>{
     btn[i].addEventListener('click', ()=>{
@@ -49,26 +61,26 @@ btn.forEach( (eachBtn, i) =>{
 })
 
 //Tabs responsive
-selected.addEventListener("click", () => {
-    btnTab.classList.toggle("active");
+selected.addEventListener('click', () => {
+    btnTab.classList.toggle('active');
   });
   
   btn.forEach( (eachBtn, i) => {
-      btn[i].addEventListener("click", () => {
+      btn[i].addEventListener('click', () => {
           const element = btn[i];
           selected.innerHTML = `${element.innerHTML}`
-          btnTab.classList.remove("active");
+          btnTab.classList.remove('active');
       });
   });
   
 
 //swiper
-const swiper = new Swiper(".mySwiper", {
+const swiper = new Swiper('.mySwiper', {
     //slidesPerView: 3,
     spaceBetween: 30,
     freeMode: true,
     pagination: {
-      el: ".swiper-pagination",
+      el: '.swiper-pagination',
       clickable: true,
     },
     breakpoints: {
@@ -85,23 +97,23 @@ const swiper = new Swiper(".mySwiper", {
   });
 
 //Modal calculadora
-const modalViews = document.querySelectorAll(".calculadora__modal");
-const modalBtns = document.querySelectorAll(".calculadora__btn");
-const modalCloses = document.querySelectorAll(".calculadora__modal-close");
+const modalViews = document.querySelectorAll('.calculadora__modal');
+const modalBtns = document.querySelectorAll('.calculadora__btn');
+const modalCloses = document.querySelectorAll('.calculadora__modal-close');
 
 let modal = function(modalClick){
-    modalViews[modalClick].classList.add("active-modal");
+    modalViews[modalClick].classList.add('active-modal');
 }
 
 modalBtns.forEach((modalBtn, i) =>{
-    modalBtn.addEventListener("click", () =>{
+    modalBtn.addEventListener('click', () =>{
         modal(i);
     });
 });
 modalCloses.forEach((modalClose) =>{
-    modalClose.addEventListener("click", () =>{
+    modalClose.addEventListener('click', () =>{
         modalViews.forEach((modalView) =>{
-            modalView.classList.remove("active-modal");
+            modalView.classList.remove('active-modal');
         });
     });
 });

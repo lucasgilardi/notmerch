@@ -52,6 +52,7 @@ header .logo{
 header nav{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 header nav ul{
@@ -69,7 +70,12 @@ header nav ul li a{
     font-size: .8rem;
     font-weight: bold;
 }
-
+.header__logo-desktop{
+    width: 12%;
+}
+.header__logo-desktop img{
+    width: 100%;
+}
 .work__btn{
     background-color: var(--pink);
     border-radius: 1.8rem;
@@ -323,6 +329,7 @@ header nav ul li a{
     backdrop-filter: blur(15px);
     border-radius: 5.6rem 5.6rem 0 0 ;
     height: 30rem;
+    width: 100%;
     padding: 0 3rem;
     display: flex;
     flex-direction: column;
@@ -500,6 +507,7 @@ header nav ul li a{
     text-decoration: none;
     font-size: 1.5rem;
     font-family: 'NeueMachina';
+    font-weight: bold;
     cursor: pointer;
 }
 .calculadora__btn span{
@@ -622,17 +630,26 @@ footer{
     .hamburguer.active .bar:nth-child(3){
         transform: translateY(-8px) rotate(-45deg);
     }
+    .hamburguer.active .bar{
+        background-color: #fff;
+    }
     header{
         display: flex;
         justify-content: space-between;
+        background: unset;
+        backdrop-filter: none;
+        border-bottom: none;
     }
     header .logo{
         display: block;
     }
+    .header__logo-mobile{
+        width: 30%;
+    }
     header nav{
         position: fixed;
         left: -100%;
-        top: 62px;
+        top: 3.75rem;
         gap: 0;
         flex-direction: column;
         transition: .3s;
@@ -702,9 +719,13 @@ footer{
     .hacemos__text-container h2{
         font-size: 3rem;
         text-align: left;
+        align-self: flex-start;
     }
     .hacemos__text-container p{
         text-align: left;
+    }
+    .hacemos__btn{
+        align-self: flex-start;
     }
     .servicios__section{
         margin: 2rem 1rem;
@@ -716,9 +737,15 @@ footer{
     .servicios__container{
         flex-direction: column;
         gap: 2rem;
+        align-items: flex-start;
+        position: relative;
     }
     .servicios__tab{
         padding: 1rem 3rem;
+        height: auto;
+    }
+    .servicios__tab img{
+        width: 30%;
     }
     .servicios__tab h3{
         font-size: 1.5rem;
@@ -735,6 +762,12 @@ footer{
     .servicios__btn-tabs.active{
         display: block;
         margin: 0 2rem;
+        background-color: #ffff;
+        border-radius: 10px;
+        position: absolute;
+        top: 3rem;
+        z-index: 1;
+        padding: 0.5rem;
     }
     .servicios__btn-tab.active-btn{
         font-size: 1.1rem;
@@ -747,7 +780,7 @@ footer{
         width: 14rem;
         display: flex;
         justify-content: space-between;
-        margin: 0 2rem;
+        align-items: center;
         font-size: 1.2rem;
         font-weight: bold;
     }
@@ -777,6 +810,9 @@ footer{
     }
     .por-que__text-container h2{
         font-size: 3rem;
+    }
+    .por-que__btn{
+        align-self: flex-end;
     }
     .brand, .products, .sales{
         height: auto;
@@ -823,11 +859,15 @@ footer{
     .copyrigth__footer{
         order: 1;
         border-right: 0;
+        border-top: solid 1px #000;
     }
 }
 @media (max-width: 576px){
     .hacemos__text-container h2{
-        font-size: 2rem;
+        font-size: 2.5rem;
+    }
+    .hacemos__img img{
+        width: 70%;
     }
     .servicios__section h2{
         font-size: 2rem;
@@ -841,6 +881,24 @@ footer{
     }
     .por-que__text-container h2{
         font-size: 2rem;
+    }
+    .calculadora__section h2{
+        font-size: 1.5rem;
+    }
+    .calculadora__btn{
+        font-size: 1rem;
+    }
+    .contact__footer{
+        gap: 2rem;
+    }
+    .contact__footer h3{
+        font-size: 2.8rem;
+    }
+    .location__footer{
+        gap: 2rem;
+    }
+    .copyrigth__footer{
+        text-align: center;
     }
     /* .swiper-slide{
         width: 100%!important;

@@ -12,16 +12,18 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <div class="logo">
-            <img src="assets/img/logo.png" alt="Logo Notmerch">
+            <a href="#hero">
+                <img src="assets/img/logo.png" alt="Logo Notmerch" class="header__logo-mobile">
+            </a>
         </div>
         <nav class="nav">
             <ul>
                 <li><a href="#hacemos" class="nav-link">QUÉ HACEMOS</a></li>
                 <li><a href="#por-que" class="nav-link">¿POR QUÉ NOTMERCH?</a></li>
             </ul>
-            <div>
+            <div class="header__logo-desktop">
                 <img src="assets/img/logo.png" alt="Logo Notmerch">
             </div>
             <ul>
@@ -36,7 +38,7 @@
         </div>
     </header>
     <main>
-        <section class="hero__section">
+        <section class="hero__section" id="hero">
             <div class="hero__titles">
                 <h2>WE CRAFT BIG BRANDS</h2>
                 <h1>REINVEN<span class="mobile-break">TING</span><br> <span class="hero__title-size">MERCH <sup>TM</sup></span> </h1>
@@ -91,7 +93,7 @@
                     <li class="servicios__btn-tab"> <img src="assets/icons/soporte.svg" alt="Ícono soporte" class="icon"> <span>SOPORTE</span> </li>
                 </ul>
                 <div class="selected">
-                    Seleccionar
+                    <img src="assets/icons/estrategia.svg" alt="Ícono estrategia" class="icon show-icon"> <span>ESTRATEGIA</span>
                 </div>
                 <div class="servicios__tabs">
                     <div class="servicios__tab active-tab">
