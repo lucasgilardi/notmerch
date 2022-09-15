@@ -121,6 +121,18 @@ header nav ul li a{
     text-align: center;
     font-family: 'HeadingNow';
     line-height: .8;
+    position: relative;
+}
+.icon__boca{
+    position: absolute;
+    top: 20%;
+    left: 0;
+}
+.icon__rayo{
+    position: absolute;
+    top: 16%;
+    right: -4%;
+    z-index: -1;
 }
 .hero__section h1 .hero__title-size{
     font-size: 10.5rem;
@@ -253,22 +265,25 @@ header nav ul li a{
     font-family: 'HeadingNow';
 }
 .hacemos__text-container p{
-    font-size: 1.25rem;
+    font-size: 1.3rem;
 }
 .hacemos__btn{
     background-color: #fff;
     border-radius: 1.8rem;
     border: 1px solid #000;
     width: fit-content;
-    padding: .6rem 1.3rem;
+    padding: .4rem 1.8rem;
     color: var(--body-text);
     text-decoration: none;
-    font-size: .8rem;
+    font-size: 1.2rem;
     font-weight: bold;
+    box-shadow: 2px 2px 4px rgb(0 0 0 / 30%);
 }
 .hacemos__img{
     display: flex;
     justify-content: center;
+    width: 80%;
+    margin: auto;
 }
 .hacemos__img img{
     width: 100%;
@@ -276,16 +291,19 @@ header nav ul li a{
 
 /*Servicios*/
 .servicios__section{
-    margin: 2rem 4rem;
+    margin-top: -4rem;
+    border-top: solid 1px #000;
+    position: relative;
 }
 .servicios__section h2{
     font-size: 3rem;
     font-family: 'HeadingNow';
+    margin: 2rem 4rem;
 }
 .servicios__container{
     display: flex;
     gap: 6rem;
-    margin: 2rem 0;
+    margin: 2rem 4rem;
 }
 .servicios__btn-tabs{
     list-style: none;
@@ -359,6 +377,11 @@ header nav ul li a{
 .selected{
     display: none;
 }
+.icon__x{
+    position: absolute;
+    right: 0;
+    top: 12%;
+}
 
 /*Experiencia*/
 .experiencia__section{
@@ -430,6 +453,9 @@ header nav ul li a{
     margin: 0 0 1.5rem 1.5rem;
 }
 /*Por qué nosotros*/
+.por-que__section{
+    margin-top: -4rem;
+}
 .por-que__text-container{
     display: flex;
     flex-direction: column;
@@ -443,7 +469,7 @@ header nav ul li a{
     text-align: right;
 }
 .por-que__text-container p{
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     text-align: right;
 }
 .por-que__btn{
@@ -617,6 +643,50 @@ footer{
     text-align: right;
 }
 
+@media(max-width: 1200px){
+    .hero__section h1{
+        font-size: 5rem;
+    }
+    .hero__section h1 .hero__title-size{
+        font-size: 8.5rem;
+    }
+    .servicios__section{
+        margin-top: 0;
+    }
+    .hacemos__img{
+        width: 100%;
+    }
+}
+@media(max-width: 1024px){
+    .hero__section h1{
+        font-size: 3rem;
+    }
+    .hero__section h1 .hero__title-size {
+        font-size: 5rem;
+    }
+    .hero__section h1 sup{
+        font-size: 2rem;
+        margin-left: -2rem;
+    }
+    .icon__boca{
+        top: 20%;
+        left: 13%;
+        width: 15%;
+    }
+    .icon__rayo{
+        top: 16%;
+        right: 13%;
+        width: 15%;
+    }
+    .servicios__tab h3{
+        font-size: 1.5rem;
+    }
+    .icon__x{
+        top: 20%;
+        width: 25%;
+    }
+}
+
 @media (max-width: 768px){
     .hamburguer{
         display: block;
@@ -682,21 +752,6 @@ footer{
     .hero__titles{
         margin: 0;
     }
-    .hero__section h1{
-        font-size: 3rem;
-    }
-    .hero__section h1 .hero__title-size {
-        font-size: 3rem;
-    }
-    .hero__section h1 sup{
-        font-size: 1.5rem;
-        margin-left: -1rem;
-    }
-    .mobile-break{
-        display: block;
-        font-size: 5.5rem;
-        margin-bottom: -2rem;
-    }
     .hero__section h2{
         font-size: 1rem;
         text-align: center;
@@ -727,8 +782,12 @@ footer{
     .hacemos__btn{
         align-self: flex-start;
     }
+    .hacemos__img{
+        width: 100%;
+    }
     .servicios__section{
-        margin: 2rem 1rem;
+        margin: 2rem 0;
+        border-top: none;
     }
     .servicios__section h2{
         font-size: 3rem;
@@ -739,6 +798,7 @@ footer{
         gap: 2rem;
         align-items: flex-start;
         position: relative;
+        margin: 0 1rem;
     }
     .servicios__tab{
         padding: 1rem 3rem;
@@ -863,6 +923,24 @@ footer{
     }
 }
 @media (max-width: 576px){
+    .hero__section h1{
+        font-size: 3rem;
+    }
+    .hero__section h1 .hero__title-size {
+        font-size: 3rem;
+    }
+    .hero__section h1 sup{
+        font-size: 1.5rem;
+        margin-left: -1rem;
+    }
+    .mobile-break{
+        display: block;
+        font-size: 5.5rem;
+        margin-bottom: -2rem;
+    }
+    .icon__boca, .icon__rayo, .icon__x{
+        width: 25%;
+    }
     .hacemos__text-container h2{
         font-size: 2.5rem;
     }
