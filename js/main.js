@@ -28,15 +28,12 @@ document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', 
 const root = document.documentElement;
 const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue('--marquee-elements-displayed');
 const marqueeContent = document.querySelector('ul.marquee-content');
-
-root.style.setProperty('--marquee-elements', marqueeContent.children.length);
-
-for(let i=0; i<marqueeElementsDisplayed; i++) {
-  marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
-}
-
 const marqueeContentTwo = document.querySelector('ul.marquee-contentTwo');
-for(let i=0; i<marqueeElementsDisplayed; i++) {
+root.style.setProperty('--marquee-elements', marqueeContent.children.length);
+root.style.setProperty('--marquee-elements', marqueeContentTwo.children.length);
+
+for( let i=0; i<marqueeElementsDisplayed; i++ ) {
+  marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
   marqueeContentTwo.appendChild(marqueeContentTwo.children[i].cloneNode(true));
 }
 
@@ -117,4 +114,3 @@ modalCloses.forEach((modalClose) =>{
         });
     });
 });
-
