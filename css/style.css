@@ -14,6 +14,7 @@
     --marquee-elements-displayed: 6;
     --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
     --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+    --marquee-animation-durationTwo: calc(var(--marquee-elementsTwo) * 3s);
   }
 
 @font-face{
@@ -33,8 +34,16 @@
 }
 body{
     font-family: var(--text-font);
-    background-color: #FFF7DE;
+    /* background-color: #FFF7DE; */
     color: var(--body-text);
+    background: url('../assets/img/bg.png'),
+                linear-gradient(180deg, rgba(255,247,222,1) 39%, rgba(232,186,246,1) 69%, rgba(186,242,246,1) 100%);
+                /* radial-gradient(circle, #BAF2F6 21.35%, rgba(217, 217, 217, 0) 100%); */
+                /* radial-gradient(circle, #E8BAF6 21.35%, rgba(217, 217, 217, 0) 100%), */
+                /* radial-gradient(circle, #EAFA89 21.35%, rgba(217, 217, 217, 0) 100%); */
+    background-position: center;
+
+
 }
 header{
     padding: 1rem;
@@ -134,12 +143,14 @@ header nav ul li a{
     position: absolute;
     top: 28%;
     left: 0;
+    transition: .2s;
 }
 .icon__rayo{
     position: absolute;
     top: 28%;
     right: 0%;
     z-index: -1;
+    transition: .2s;
 }
 .hero__section h1 .hero__title-size{
     font-size: 10.5rem;
@@ -237,7 +248,7 @@ header nav ul li a{
     list-style: none;
     height: 100%;
     display: flex;
-    animation: scrolling var(--marquee-animation-duration) linear infinite;
+    animation: scrolling var(--marquee-animation-durationTwo) linear infinite;
 }
 @keyframes scrolling {
     0% { transform: translateX(0); }
@@ -261,6 +272,7 @@ header nav ul li a{
     grid-template-columns: 1fr .8fr;
     align-items: flex-start;
     margin: 2rem 4rem;
+    gap: 2rem;
 }
 .hacemos__text-container{
     display: flex;
@@ -270,6 +282,7 @@ header nav ul li a{
 .hacemos__text-container h2{
     font-size: 3rem;
     font-family: var(--titles-font);
+    line-height: 1.2;
 }
 .hacemos__text-container p{
     font-size: 1.3rem;
@@ -318,18 +331,18 @@ header nav ul li a{
     font-size: 3rem;
     font-family: var(--titles-font);
     margin: 2rem 4rem;
+    line-height: 1.2;
 }
 .servicios__container{
     display: flex;
     gap: 6rem;
-    margin: 2rem 4rem;
+    margin: 2rem 4rem 5rem 4rem;
 }
 .servicios__btn-tabs{
     list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 0.8rem;
 }
 .servicios__btn-tab{
     font-size: 1.1rem;
@@ -365,7 +378,7 @@ header nav ul li a{
     background: linear-gradient(180deg, rgba(217, 217, 217, 0.35) 0%, rgba(217, 217, 217, 0) 100%);
     backdrop-filter: blur(15px);
     border-radius: 5.6rem 5.6rem 0 0 ;
-    height: 30rem;
+    height: 35rem;
     width: 100%;
     padding: 0 3rem;
     display: flex;
@@ -383,9 +396,12 @@ header nav ul li a{
 .servicios__tab h3{
     font-size: 2.3rem;
     font-family: var(--titles-font);
+    margin-left: 2rem;
 }
 .servicios__tab p{
     font-size: 1.25rem;
+    width: 75%;
+    margin-left: 2rem;
 }
 .servicios__tab.active-tab{
     opacity: 1;
@@ -411,6 +427,7 @@ header nav ul li a{
     font-size: 3rem;
     font-family: var(--titles-font);
     margin: 0 4rem;
+    line-height: 1.2;
 }
 /*swiper*/
 .swiper{
@@ -424,6 +441,7 @@ header nav ul li a{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 500px!important;
 }
 .swiper-slide img {
     display: block;
@@ -478,6 +496,9 @@ header nav ul li a{
 .por-que__section{
     margin-top: -4rem;
 }
+.por-que__img{
+    width: 85%;
+}
 .por-que__text-container{
     display: flex;
     flex-direction: column;
@@ -489,6 +510,7 @@ header nav ul li a{
     font-size: 3rem;
     font-family: var(--titles-font);
     text-align: right;
+    line-height: 1.2;
 }
 .por-que__text-container p{
     font-size: 1.3rem;
@@ -518,17 +540,16 @@ header nav ul li a{
     justify-content: center;
     gap: 0.5rem;
     height: 34rem;
-    padding: 1.5rem;
+    padding: 1rem 3rem;
 }
 .brand img, .products img, .sales img{
-    width: 20%;
+    width: 30%;
 }
 .brand h3, .products h3, .sales h3{
     font-size: 1.75rem;
 }
 .brand p, .products p, .sales p{
     font-size: 1.25rem;
-    width: 85%;
 }
 .products{
     border-right: solid 1px #000;
@@ -616,7 +637,7 @@ header nav ul li a{
 footer{
     display: grid;
     grid-template-columns: 1fr .5fr;
-    grid-template-rows: 16rem 4rem;
+    grid-template-rows: 4fr 1fr;
     grid-template-areas: 
         "contact location"
         "copyright location";
@@ -630,7 +651,7 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 2rem;
+    padding: 2rem 3.5rem;
 }
 .contact__footer h3{
     font-size: 2.25rem;
@@ -650,7 +671,7 @@ footer{
     border-right: solid 1px #000;
     display: flex;
     align-items: center;
-    padding: 2rem;
+    padding: 2rem 3.5rem;
 }
 .copyrigth__footer p{
     font-size: .9rem;
@@ -662,7 +683,7 @@ footer{
     justify-content: center;
     align-items: flex-end;
     gap: 3rem;
-    padding: 2rem;
+    padding: 2rem 3.5rem;
 }
 .location__footer h4{
     font-size: 1.6rem;
@@ -673,7 +694,7 @@ footer{
     font-size: 1.1rem;
     text-align: right;
 }
-/* @media(max-width: 1920px){
+@media(max-width: 1920px){
     .icon__boca{
         top: 35%;
         left: 15%;
@@ -682,19 +703,29 @@ footer{
         top: 35%;
         right: 14%;
     }
-} */
-@media(max-width: 1200px){
+}
+@media(max-width: 1400px){
     .hero__section h1{
-        font-size: 5rem;
+        font-size: 5.08rem;
     }
     .hero__section h1 .hero__title-size{
         font-size: 8.5rem;
     }
-    .servicios__section{
-        margin-top: 0;
+    .icon__boca{
+        top: 34%;
+        left: 7%;
+    }
+    .icon__rayo{
+        top: 30%;
+        right: 4%;
     }
     .hacemos__img{
         width: 100%;
+    }
+}
+@media(max-width: 1200px){
+    .servicios__section{
+        margin-top: 0;
     }
 }
 @media(max-width: 1024px){
@@ -726,8 +757,19 @@ footer{
         width: 25%;
     }
 }
-
+@media (max-width: 992px){
+    .brand, .products, .sales{
+        height: auto;
+        padding: 1rem 2rem;
+    }
+}
 @media (max-width: 768px){
+    body{
+        background: url('../assets/img/bg-tablet.png'),
+                    linear-gradient(180deg, rgba(255,247,222,1) 39%, rgba(232,186,246,1) 69%, rgba(186,242,246,1) 100%);
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
     .hamburguer{
         display: block;
     }
@@ -814,7 +856,7 @@ footer{
         display: flex;
         flex-direction: column;
         gap: 3rem;
-        margin: 3rem 1rem;
+        margin: 3rem 2rem;
     }
     .hacemos__text-container{
         align-items: center;
@@ -833,6 +875,9 @@ footer{
     .hacemos__img-desktop {
         width: 80%;
     }
+    .icon__x {
+        top: 0%;
+    }
     .servicios__section{
         margin: 2rem 0;
         border-top: none;
@@ -846,7 +891,7 @@ footer{
         gap: 2rem;
         align-items: flex-start;
         position: relative;
-        margin: 0 1rem;
+        margin: 0 2rem;
     }
     .servicios__tab{
         padding: 1rem 3rem;
@@ -910,6 +955,10 @@ footer{
         text-align: center;
         margin: 0;
     }
+    .swiper{
+        width: auto;
+        margin: 4rem -4rem;
+    }
     .por-que__section{
         grid-template-columns: 1fr;
     }
@@ -924,6 +973,11 @@ footer{
     }
     .brand, .products, .sales{
         height: auto;
+        gap: 1.5rem;
+        padding: 3rem 3rem;
+    }
+    .brand img, .products img, .sales img{
+        width: 20%;
     }
     .products{
         border-top: solid 1px #000;
@@ -989,6 +1043,17 @@ footer{
     .icon__boca, .icon__rayo, .icon__x{
         width: 25%;
     }
+    .icon__boca{
+        top: 40%;
+        left: 0%;
+    }
+    .icon__rayo{
+        top: 40%;
+        right: 0%;
+    }
+    .hacemos__section{
+        gap: 1rem;
+    }
     .hacemos__text-container h2{
         font-size: 2.5rem;
     }
@@ -999,7 +1064,17 @@ footer{
         display: block;
     }
     .servicios__section h2{
-        font-size: 1.5rem;
+        font-size: 2rem;
+    }
+    .servicios__tab h3{
+        margin-left: 0;
+    }
+    .servicios__tab p{
+        width: auto;
+        margin-left: 0;
+    }
+    .experiencia__section{
+        margin: 7rem 0 2rem 0;
     }
     .experiencia__section h2{
         font-size: 2rem;
@@ -1008,8 +1083,14 @@ footer{
         margin: 2rem auto;
         width: 80%;
     }
+    .swiper-slide{
+        width: 357px!important;
+    }
     .por-que__text-container h2{
         font-size: 2rem;
+    }
+    .calculadora__section{
+        padding: 0 2rem;
     }
     .calculadora__section h2{
         font-size: 1.5rem;

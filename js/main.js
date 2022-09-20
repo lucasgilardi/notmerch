@@ -30,7 +30,7 @@ const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue('--marq
 const marqueeContent = document.querySelector('ul.marquee-content');
 const marqueeContentTwo = document.querySelector('ul.marquee-contentTwo');
 root.style.setProperty('--marquee-elements', marqueeContent.children.length);
-root.style.setProperty('--marquee-elements', marqueeContentTwo.children.length);
+root.style.setProperty('--marquee-elementsTwo', marqueeContentTwo.children.length);
 
 for( let i=0; i<marqueeElementsDisplayed; i++ ) {
   marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
