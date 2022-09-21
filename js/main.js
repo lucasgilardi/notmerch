@@ -13,7 +13,7 @@ hamburguer.addEventListener('click', () =>{
         logo.src = 'assets/img/logo-white.png';
     }else{
         header.style.backgroundColor = 'unset';
-        logo.src = 'assets/img/logo.png';
+        logo.src = 'assets/img/logo.svg';
     }
 });
 
@@ -21,7 +21,7 @@ document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', 
     hamburguer.classList.remove('active');
     navMenu.classList.remove('active');
     header.style.backgroundColor = 'unset';
-    logo.src = 'assets/img/logo.png';
+    logo.src = 'assets/img/logo.svg';
 }));
 
 //Marquee

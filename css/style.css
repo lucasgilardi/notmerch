@@ -42,8 +42,8 @@ body{
                 /* radial-gradient(circle, #E8BAF6 21.35%, rgba(217, 217, 217, 0) 100%), */
                 /* radial-gradient(circle, #EAFA89 21.35%, rgba(217, 217, 217, 0) 100%); */
     background-position: center;
-
-
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 header{
     padding: 1rem;
@@ -76,14 +76,14 @@ header nav ul li a{
     text-decoration: none;
     color: var(--body-text);
     font-family: var(--text-font);
-    font-size: .8rem;
+    font-size: .9rem;
     font-weight: bold;
 }
 .header__logo-desktop{
     width: 12%;
 }
 .header__logo-desktop img{
-    width: 100%;
+    width: 80%;
 }
 .work__btn{
     background-color: var(--pink);
@@ -93,6 +93,8 @@ header nav ul li a{
     font-size: .8rem;
     border: 1px solid #000;
     transition: .3s;
+    display: flex;
+    align-items: baseline;
 }
 .work__btn:hover{
     background-color: #df67cc;
@@ -131,6 +133,8 @@ header nav ul li a{
 .hero__section h2{
     font-size: 1.25rem;
     text-align: center;
+    font-weight: bold;
+    line-height: 3rem;
 }
 .hero__section h1{
     font-size: 6.5rem;
@@ -138,6 +142,13 @@ header nav ul li a{
     font-family: var(--titles-font);
     line-height: .8;
     position: relative;
+}
+.hero__section h1 .hero__title-size{
+    font-size: 11rem;
+}
+.hero__section h1 sup{
+    font-size: 3rem;
+    margin-left: -4rem;
 }
 .icon__boca{
     position: absolute;
@@ -151,13 +162,6 @@ header nav ul li a{
     right: 0%;
     z-index: -1;
     transition: .2s;
-}
-.hero__section h1 .hero__title-size{
-    font-size: 10.5rem;
-}
-.hero__section h1 sup{
-    font-size: 3rem;
-    margin-left: -4rem;
 }
 .scroll-downs {
     display: flex;
@@ -210,13 +214,13 @@ header nav ul li a{
     list-style: none;
     height: 100%;
     display: flex;
-    animation: scrolling var(--marquee-animation-duration) linear infinite;
+    animation: marquee var(--marquee-animation-duration) linear infinite;
 }
-@keyframes scrolling {
+@keyframes marquee {
     0% { transform: translateX(0); }
     100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
 }
-.marquee-content li {
+.marquee-content li, .marquee-contentTwo li {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -225,6 +229,7 @@ header nav ul li a{
     font-size: 2rem;
     white-space: nowrap;
     margin-left: 1rem;
+    font-weight: bold;
 }
 
 .marqueeTwo {
@@ -248,11 +253,12 @@ header nav ul li a{
     list-style: none;
     height: 100%;
     display: flex;
-    animation: scrolling var(--marquee-animation-durationTwo) linear infinite;
+    animation: marqueeTwo var(--marquee-animation-durationTwo) linear infinite;
 }
-@keyframes scrolling {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
+@keyframes marqueeTwo {
+    0% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
+    100% { transform: translateX(0); }
+    
 }
 .marquee-contentTwo li {
     display: flex;
@@ -282,10 +288,11 @@ header nav ul li a{
 .hacemos__text-container h2{
     font-size: 3rem;
     font-family: var(--titles-font);
-    line-height: 1.2;
+    line-height: 4rem;
 }
 .hacemos__text-container p{
     font-size: 1.3rem;
+    line-height: 1.7rem;
 }
 .hacemos__btn{
     background-color: #fff;
@@ -343,27 +350,27 @@ header nav ul li a{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 0.5rem;
 }
 .servicios__btn-tab{
     font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
     transition: all .5s ease;
-    padding: 0.6rem;
+    padding: 0.3rem;
     border-radius: 5rem;
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 .servicios__btn-tab.active-btn{
-    border: solid 1px #000;
-    width: 13rem;
-    padding: 0.6rem;
-    border-radius: 5rem;
+    border: solid 1.3px #000;
+    width: fit-content;
     font-size: 1.3rem;
+    gap: 2rem;
 }
 .servicios__btn-tab .icon{
-    width: 15%;
+    width: 20%;
     display: none;
 }
 .servicios__btn-tab .show-icon{
@@ -380,7 +387,7 @@ header nav ul li a{
     border-radius: 5.6rem 5.6rem 0 0 ;
     height: 35rem;
     width: 100%;
-    padding: 0 3rem;
+    padding: 0 7rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -391,17 +398,18 @@ header nav ul li a{
     transition: all .5s ease;
 }
 .servicios__tab img{
-    width: 15%;
+    width: 20%;
 }
 .servicios__tab h3{
     font-size: 2.3rem;
     font-family: var(--titles-font);
-    margin-left: 2rem;
+    margin-left: 1.5rem;
 }
 .servicios__tab p{
     font-size: 1.25rem;
-    width: 75%;
-    margin-left: 2rem;
+    width: 85%;
+    margin-left: 1.5rem;
+    line-height: 1.7rem;
 }
 .servicios__tab.active-tab{
     opacity: 1;
@@ -483,11 +491,15 @@ header nav ul li a{
 } 
 .overlay__title{
     font-size: 1.8rem;
+    font-weight: bold;
     text-align: left;
+    padding: 1rem;
 }
 .overlay__description{
     font-size: 1.5rem;
+    font-weight: bold;
     text-align: left;
+    padding: 0 1rem;
 }
 .overlay__text-container{
     margin: 0 0 1.5rem 1.5rem;
@@ -510,11 +522,12 @@ header nav ul li a{
     font-size: 3rem;
     font-family: var(--titles-font);
     text-align: right;
-    line-height: 1.2;
+    line-height: 4rem;
 }
 .por-que__text-container p{
     font-size: 1.3rem;
     text-align: right;
+    line-height: 1.7rem;
 }
 .por-que__btn{
     background-color: var(--body-text);
@@ -540,7 +553,7 @@ header nav ul li a{
     justify-content: center;
     gap: 0.5rem;
     height: 34rem;
-    padding: 1rem 3rem;
+    padding: 2rem;
 }
 .brand img, .products img, .sales img{
     width: 30%;
@@ -655,13 +668,16 @@ footer{
 }
 .contact__footer h3{
     font-size: 2.25rem;
+    font-weight: bold;
 }
 .contact__footer p{
     font-size: 1.25rem;
+    line-height: 1.7rem;
 }
 .contact__footer a{
     color: var(--body-text);
     font-size: 1.4rem;
+    line-height: 1.7rem;
 }
 .contact__footer a:nth-child(2), .contact__footer a:nth-child(3){
     margin-left: 1rem;
@@ -675,6 +691,7 @@ footer{
 }
 .copyrigth__footer p{
     font-size: .9rem;
+    line-height: 1.7rem;
 }
 .location__footer{
     grid-area: location;
@@ -693,6 +710,7 @@ footer{
 .location__footer p{
     font-size: 1.1rem;
     text-align: right;
+    line-height: 1.7rem;
 }
 @media(max-width: 1920px){
     .icon__boca{
@@ -730,7 +748,7 @@ footer{
 }
 @media(max-width: 1024px){
     .hero__section h1{
-        font-size: 3rem;
+        font-size: 3.07rem;
     }
     .hero__section h1 .hero__title-size {
         font-size: 5rem;
@@ -758,6 +776,9 @@ footer{
     }
 }
 @media (max-width: 992px){
+    .servicios__tab{
+        padding: 0 2rem;
+    }
     .brand, .products, .sales{
         height: auto;
         padding: 1rem 2rem;
@@ -883,7 +904,7 @@ footer{
         border-top: none;
     }
     .servicios__section h2{
-        font-size: 3rem;
+        font-size: 2.5rem;
         text-align: center;
     }
     .servicios__container{
@@ -949,6 +970,9 @@ footer{
     .servicios__btn-tabs.active + .selected::after {
         transform: rotateX(180deg);
         top: -6px;
+    }
+    .experiencia__section{
+        margin: 4rem 0;
     }
     .experiencia__section h2{
         font-size: 3rem;
@@ -1064,7 +1088,10 @@ footer{
         display: block;
     }
     .servicios__section h2{
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+    .servicios__tab {
+        padding: 1rem 2rem;
     }
     .servicios__tab h3{
         margin-left: 0;
