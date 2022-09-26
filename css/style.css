@@ -84,6 +84,8 @@ header nav ul li a{
 }
 .header__logo-desktop img{
     width: 80%;
+    display: block;
+    margin: auto;
 }
 .work__btn{
     background-color: var(--pink);
@@ -712,6 +714,7 @@ footer{
     text-align: right;
     line-height: 1.7rem;
 }
+
 @media(max-width: 1920px){
     .icon__boca{
         top: 35%;
@@ -809,9 +812,9 @@ footer{
     header{
         display: flex;
         justify-content: space-between;
-        background: unset;
+        /* background: unset;
         backdrop-filter: none;
-        border-bottom: none;
+        border-bottom: none; */
     }
     header .logo{
         display: block;
@@ -1049,6 +1052,9 @@ footer{
     }
 }
 @media (max-width: 576px){
+    .hero__section{
+        height: auto;
+    }
     .hero__section h1{
         font-size: 3rem;
     }
@@ -1065,21 +1071,40 @@ footer{
         margin-bottom: -2rem;
     }
     .icon__boca, .icon__rayo, .icon__x{
-        width: 25%;
+        width: 18%;
     }
-    .icon__boca{
-        top: 40%;
-        left: 0%;
+    .icon__boca {
+        top: 17%;
+        left: 14%;
     }
     .icon__rayo{
-        top: 40%;
-        right: 0%;
+        top: 10%;
+        right: 12%;
+    }
+    .scroll-downs{
+        display: none;
+    }
+    .marquee{
+        height: 5vh;
+        transform: rotate(4deg) translateY(80%);
+    }
+    .marqueeTwo{
+        height: 5vh;
+        transform: rotate(-4deg) translateY(-50%);
     }
     .hacemos__section{
         gap: 1rem;
     }
     .hacemos__text-container h2{
-        font-size: 2.5rem;
+        font-size: 3rem;
+        margin: auto;
+    }
+    .hacemos__text-container p {
+        margin: auto;
+        width: 95%;
+    }
+    .hacemos__btn {
+        margin-left: 0.6rem;
     }
     .hacemos__img-desktop{
         display: none;
@@ -1087,8 +1112,9 @@ footer{
     .hacemos__img-mobile{
         display: block;
     }
-    .servicios__section h2{
-        font-size: 1.8rem;
+    .servicios__section h2 {
+        font-size: 2.5rem;
+        margin: 2rem 0;
     }
     .servicios__tab {
         padding: 1rem 2rem;
@@ -1100,8 +1126,12 @@ footer{
         width: auto;
         margin-left: 0;
     }
+    .icon__x {
+        width: 30%;
+        top: 2%;
+    }
     .experiencia__section{
-        margin: 7rem 0 2rem 0;
+        margin: 2rem 0;
     }
     .experiencia__section h2{
         font-size: 2rem;
@@ -1114,7 +1144,11 @@ footer{
         width: 357px!important;
     }
     .por-que__text-container h2{
-        font-size: 2rem;
+        font-size: 3rem;
+        margin: auto;
+    }
+    .por-que__text-container p{
+        width: 95%;
     }
     .calculadora__section{
         padding: 0 2rem;
@@ -1140,4 +1174,47 @@ footer{
     /* .swiper-slide{
         width: 100%!important;
     } */
+}
+@media (max-width: 480px){
+    .icon__boca {
+        top: 18%;
+        left: 11%;
+    }
+    .icon__rayo {
+        right: 6%;
+    }
+    .hacemos__text-container h2 {
+        font-size: 2.5rem;
+    }
+    .servicios__section h2 {
+        font-size: 2rem;
+    }
+    .por-que__text-container h2 {
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 425px){
+    .icon__boca {
+        left: 6%;
+    }
+    .icon__rayo {
+        right: 2%;
+    }
+    .hacemos__text-container h2 {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    .hacemos__text-container p {
+        width: 90%;
+    }
+    .servicios__section h2 {
+        font-size: 1.8rem;
+    }
+    .experiencia__section {
+        margin: 9rem 0 0 0;
+    }
+    .por-que__text-container h2 {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
 }
