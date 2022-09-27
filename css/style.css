@@ -131,6 +131,7 @@ header nav ul li a{
 }
 .hero__titles{
     margin: 0 4rem;
+    position: relative;
 }
 .hero__section h2{
     font-size: 1.25rem;
@@ -716,33 +717,42 @@ footer{
 }
 @media (max-width: 2048px){
     .icon__boca {
-        top: 34%;
-        left: 18%;
+        top: 36%;
+        left: 15%;
     }
     .icon__rayo {
-        right: 18%;
+        right: 12%;
     }
     .swiper-slide {
         width: 700px!important;
     }
 }
 @media(max-width: 1920px){
-    .icon__boca{
-        top: 35%;
-        left: 15%;
+    .icon__boca {
+        top: 36%;
+        left: 13%;
     }
-    .icon__rayo{
+    .icon__rayo {
         top: 25%;
-        right: 14%;
+        right: 10%;
     }
 }
 @media(max-width: 1700px){
-    .icon__boca{
-        left: 10%;
+    .icon__boca {
+        top: 40%;
+        left: 8%;
     }
-    .icon__rayo{
+    .icon__rayo {
         top: 23%;
-        right: 12%;
+        right: 4%;
+    }
+}
+@media(max-width: 1550px){
+    .icon__boca {
+        left: 2%;
+    }
+    .icon__rayo {
+        right: 0%;
     }
 }
 @media(max-width: 1400px){
@@ -754,14 +764,17 @@ footer{
     }
     .icon__boca{
         top: 34%;
-        left: 7%;
+        left: 4%;
     }
     .icon__rayo{
-        top: 30%;
-        right: 4%;
+        top: 25%;
+        right: 1%;
     }
     .hacemos__img{
         width: 100%;
+    }
+    .swiper-slide {
+        width: 500px!important;
     }
 }
 @media(max-width: 1200px){
@@ -780,14 +793,14 @@ footer{
         font-size: 2rem;
         margin-left: -2rem;
     }
-    .icon__boca{
-        top: 32%;
+    .icon__boca {
+        top: 36%;
         left: 13%;
         width: 15%;
     }
     .icon__rayo{
-        top: 32%;
-        right: 13%;
+        top: 35%;
+        right: 12%;
         width: 15%;
     }
     .servicios__tab h3{
@@ -799,6 +812,13 @@ footer{
     }
 }
 @media (max-width: 992px){
+    .icon__boca {
+        top: 39%;
+        left: 12%;
+    }
+    .icon__rayo {
+        right: 10%;
+    }
     .servicios__tab{
         padding: 0 2rem;
     }
@@ -882,13 +902,13 @@ footer{
         font-size: 1rem;
         text-align: center;
     }
-    .icon__boca{
-        top: 35%;
-        left: 5%;
+    .icon__boca {
+        top: 45%;
+        left: 8%;
     }
-    .icon__rayo{
+    .icon__rayo {
         top: 35%;
-        right: 5%;
+        right: 7%;
     }
     .marquee-content li{
         font-size: 1rem;
@@ -1083,6 +1103,7 @@ footer{
     }
     .hero__section{
         height: auto;
+        padding: 2rem 0;
     }
     .hero__section h1{
         font-size: 3rem;
@@ -1103,11 +1124,11 @@ footer{
         width: 18%;
     }
     .icon__boca {
-        top: 17%;
-        left: 14%;
+        top: 41%;
+        left: 13%;
     }
-    .icon__rayo{
-        top: 10%;
+    .icon__rayo {
+        top: 13%;
         right: 12%;
     }
     .scroll-downs{
@@ -1115,7 +1136,7 @@ footer{
     }
     .marquee{
         height: 5vh;
-        transform: rotate(4deg) translateY(80%);
+        transform: rotate(4deg) translateY(100%);
     }
     .marqueeTwo{
         height: 5vh;
@@ -1126,7 +1147,7 @@ footer{
         margin: 3rem 3rem;
     }
     .hacemos__text-container h2{
-        font-size: 2.8rem;
+        font-size: 3rem;
     }
     .hacemos__text-container p{
         font-size: 1.1rem;
@@ -1167,8 +1188,11 @@ footer{
     /* .swiper-slide{
         width: 354px!important;
     } */
+    .por-que__section {
+        margin-top: -5rem;
+    }
     .por-que__text-container h2{
-        font-size: 2.4rem;
+        font-size: 2.5rem;
         line-height: 3rem;
         margin: auto;
     }
@@ -1208,14 +1232,14 @@ footer{
         background-repeat: no-repeat;
     }
     .icon__boca {
-        top: 18%;
+        top: 45%;
         left: 11%;
     }
     .icon__rayo {
         right: 6%;
     }
     .hacemos__text-container h2 {
-        font-size: 2.4rem;
+        font-size: 2.5rem;
     }
     .servicios__section h2 {
         font-size: 2rem;
@@ -1224,11 +1248,12 @@ footer{
         font-size: 1.1rem;
     }
     .por-que__text-container h2 {
-        font-size: 2.1rem;
+        font-size: 2.3rem;
     }
 }
 @media (max-width: 425px){
     .icon__boca {
+        top: 50%;
         left: 6%;
     }
     .icon__rayo {
@@ -1264,10 +1289,12 @@ footer{
         font-size: 1rem;
     }
     .icon__boca {
-        top: 20%;
+        top: 52%;
+        left: 8%;
     }
     .icon__rayo {
-        top: 12%;
+        top: 18%;
+        right: 4%;
     }
     .hacemos__img-mobile {
         width: 100%;
@@ -1300,6 +1327,13 @@ footer{
     }
 }
 @media (max-width: 332px){
+    .icon__boca {
+        top: 56%;
+        left: 5%;
+    }
+    .icon__rayo {
+        right: 0%;
+    }
     .hacemos__btn{
         padding: 0.4rem 1rem;
         font-size: 1rem;
