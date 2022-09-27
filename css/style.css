@@ -714,8 +714,17 @@ footer{
     text-align: right;
     line-height: 1.7rem;
 }
-@media (max-width: y2048px){
-
+@media (max-width: 2048px){
+    .icon__boca {
+        top: 34%;
+        left: 18%;
+    }
+    .icon__rayo {
+        right: 18%;
+    }
+    .swiper-slide {
+        width: 700px!important;
+    }
 }
 @media(max-width: 1920px){
     .icon__boca{
@@ -723,8 +732,17 @@ footer{
         left: 15%;
     }
     .icon__rayo{
-        top: 35%;
+        top: 25%;
         right: 14%;
+    }
+}
+@media(max-width: 1700px){
+    .icon__boca{
+        left: 10%;
+    }
+    .icon__rayo{
+        top: 23%;
+        right: 12%;
     }
 }
 @media(max-width: 1400px){
@@ -988,6 +1006,9 @@ footer{
         width: auto;
         margin: 4rem -4rem;
     }
+    .swiper-slide{
+        width: 354px!important;
+    }
     .por-que__section{
         grid-template-columns: 1fr;
     }
@@ -1143,9 +1164,9 @@ footer{
     .swiper {
         margin: 2rem -8rem;
     }
-    .swiper-slide{
+    /* .swiper-slide{
         width: 354px!important;
-    }
+    } */
     .por-que__text-container h2{
         font-size: 2.4rem;
         line-height: 3rem;
@@ -1243,10 +1264,10 @@ footer{
         font-size: 1rem;
     }
     .icon__boca {
-        top: 32%;
+        top: 20%;
     }
     .icon__rayo {
-        top: 18%;
+        top: 12%;
     }
     .hacemos__img-mobile {
         width: 100%;
@@ -1260,6 +1281,9 @@ footer{
     }
     .servicios__tab h3 {
         font-size: 1.2rem;
+    }
+    .icon__x {
+        top: 8%;
     }
     .experiencia__section {
         margin: 14rem 0 0 0;
@@ -1276,6 +1300,10 @@ footer{
     }
 }
 @media (max-width: 332px){
+    .hacemos__btn{
+        padding: 0.4rem 1rem;
+        font-size: 1rem;
+    }
     .servicios__btn-tabs.active{
         margin: 0 1rem;
     }
