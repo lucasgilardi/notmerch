@@ -714,7 +714,9 @@ footer{
     text-align: right;
     line-height: 1.7rem;
 }
+@media (max-width: y2048px){
 
+}
 @media(max-width: 1920px){
     .icon__boca{
         top: 35%;
@@ -1052,6 +1054,12 @@ footer{
     }
 }
 @media (max-width: 576px){
+    body{
+        background: url('../assets/img/bg-mobile.png'),
+                    linear-gradient(180deg, rgba(255,247,222,1) 39%, rgba(232,186,246,1) 69%, rgba(186,242,246,1) 100%);
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
     .hero__section{
         height: auto;
     }
@@ -1094,17 +1102,13 @@ footer{
     }
     .hacemos__section{
         gap: 1rem;
+        margin: 3rem 3rem;
     }
     .hacemos__text-container h2{
-        font-size: 3rem;
-        margin: auto;
+        font-size: 2.8rem;
     }
-    .hacemos__text-container p {
-        margin: auto;
-        width: 95%;
-    }
-    .hacemos__btn {
-        margin-left: 0.6rem;
+    .hacemos__text-container p{
+        font-size: 1.1rem;
     }
     .hacemos__img-desktop{
         display: none;
@@ -1131,24 +1135,24 @@ footer{
         top: 2%;
     }
     .experiencia__section{
-        margin: 2rem 0;
+        margin: 7rem 0 0 0;
     }
     .experiencia__section h2{
         font-size: 2rem;
     }
-    .swiper{
-        margin: 2rem auto;
-        width: 80%;
+    .swiper {
+        margin: 2rem -8rem;
     }
     .swiper-slide{
-        width: 357px!important;
+        width: 354px!important;
     }
     .por-que__text-container h2{
-        font-size: 3rem;
+        font-size: 2.4rem;
+        line-height: 3rem;
         margin: auto;
     }
     .por-que__text-container p{
-        width: 95%;
+        font-size: 1.1rem;
     }
     .calculadora__section{
         padding: 0 2rem;
@@ -1176,6 +1180,12 @@ footer{
     } */
 }
 @media (max-width: 480px){
+    body{
+        background: url('../assets/img/bg-mobile.png'),
+                    linear-gradient(180deg, rgba(255,247,222,1) 39%, rgba(232,186,246,1) 69%, rgba(186,242,246,1) 100%);
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
     .icon__boca {
         top: 18%;
         left: 11%;
@@ -1184,13 +1194,16 @@ footer{
         right: 6%;
     }
     .hacemos__text-container h2 {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
     }
     .servicios__section h2 {
         font-size: 2rem;
     }
+    .servicios__tab p {
+        font-size: 1.1rem;
+    }
     .por-que__text-container h2 {
-        font-size: 2.5rem;
+        font-size: 2.1rem;
     }
 }
 @media (max-width: 425px){
@@ -1204,9 +1217,6 @@ footer{
         font-size: 2rem;
         line-height: 3rem;
     }
-    .hacemos__text-container p {
-        width: 90%;
-    }
     .servicios__section h2 {
         font-size: 1.8rem;
     }
@@ -1216,5 +1226,63 @@ footer{
     .por-que__text-container h2 {
         font-size: 2rem;
         line-height: 3rem;
+    }
+}
+@media (max-width: 375px){
+    .hero__section h1 {
+        font-size: 2.5rem;
+        line-height: .9;
+    }
+    .hero__section h1 .hero__title-size {
+        font-size: 2.5rem;
+    }
+    .mobile-break {
+        font-size: 4.5rem;
+    }
+    .hero__section h1 sup {
+        font-size: 1rem;
+    }
+    .icon__boca {
+        top: 32%;
+    }
+    .icon__rayo {
+        top: 18%;
+    }
+    .hacemos__img-mobile {
+        width: 100%;
+    }
+    .hacemos__text-container h2 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .servicios__section h2 {
+        font-size: 1.5rem;
+    }
+    .servicios__tab h3 {
+        font-size: 1.2rem;
+    }
+    .experiencia__section {
+        margin: 14rem 0 0 0;
+    }
+    .experiencia__section h2 {
+        font-size: 1.5rem;
+    }
+    .por-que__text-container h2 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .contact__footer h3 {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 332px){
+    .servicios__btn-tabs.active{
+        margin: 0 1rem;
+    }
+    .experiencia__section {
+        margin: 20rem 0 0 0;
+    }
+    .swiper-slide {
+        width: 320px!important;
     }
 }
