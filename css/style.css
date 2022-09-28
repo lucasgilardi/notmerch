@@ -852,12 +852,13 @@ footer{
     header{
         display: flex;
         justify-content: space-between;
-        /* background: unset;
-        backdrop-filter: none;
-        border-bottom: none; */
+        align-items: center;
     }
     header .logo{
         display: block;
+    }
+    header .logo a{
+        display: flex;
     }
     .header__logo-mobile{
         width: 25%;
@@ -1152,6 +1153,10 @@ footer{
     .hacemos__text-container p{
         font-size: 1.1rem;
     }
+    .hacemos__btn {
+        padding: 0.4rem 1.2rem;
+        font-size: .9rem;
+    }
     .hacemos__img-desktop{
         display: none;
     }
@@ -1224,6 +1229,11 @@ footer{
         width: 100%!important;
     } */
 }
+@media (max-width: 500px){
+    .hacemos__text-container h2 {
+        font-size: 2.8rem;
+    }
+}
 @media (max-width: 480px){
     body{
         background: url('../assets/img/bg-mobile.png'),
@@ -1239,7 +1249,7 @@ footer{
         right: 6%;
     }
     .hacemos__text-container h2 {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
     }
     .servicios__section h2 {
         font-size: 2rem;
