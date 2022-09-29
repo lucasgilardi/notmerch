@@ -715,18 +715,6 @@ footer{
     text-align: right;
     line-height: 1.7rem;
 }
-@media (max-width: 2048px){
-    .icon__boca {
-        top: 36%;
-        left: 15%;
-    }
-    .icon__rayo {
-        right: 12%;
-    }
-    .swiper-slide {
-        width: 700px!important;
-    }
-}
 @media(max-width: 1920px){
     .icon__boca {
         top: 36%;
@@ -1356,5 +1344,302 @@ footer{
     }
     .swiper-slide {
         width: 320px!important;
+    }
+}
+
+/*2k / 4k*/
+@media (min-width: 2048px){
+    .icon__boca {
+        top: 36%;
+        left: 15%;
+    }
+    .icon__rayo {
+        right: 12%;
+    }
+    .hacemos__text-container h2 {
+        font-size: 3.5rem;
+        line-height: 5rem;
+    }
+    .hacemos__text-container p {
+        font-size: 1.6rem;
+        line-height: 3rem;
+    }
+    .hacemos__btn {
+        padding: 0.4rem 2.8rem;
+        font-size: 1.5rem;
+    }
+    .servicios__section h2 {
+        font-size: 3.5rem;
+        line-height: 1.4;
+    }
+    .servicios__tabs {
+        min-height: 40rem;
+    }
+    .servicios__tab {
+        height: 40rem;
+    }
+    .servicios__tab img {
+        width: 12%;
+    }
+    .servicios__tab h3 {
+        font-size: 2.8rem;
+    }
+    .servicios__tab p {
+        font-size: 1.8rem;
+        width: 85%;
+        line-height: 3rem;
+    }
+    .servicios__btn-tab {
+        font-size: 1.5rem;
+    }
+    .servicios__btn-tab.active-btn {
+        font-size: 2rem;
+    }
+    .experiencia__section h2 {
+        font-size: 3.5rem;
+    }
+    .swiper-slide {
+        width: 700px!important;
+    }
+    .por-que__text-container h2 {
+        font-size: 3.5rem;
+        line-height: 5rem;
+    }
+    .por-que__text-container p {
+        font-size: 1.6rem;
+        line-height: 3rem;
+    }
+    .brand, .products, .sales {
+        height: 40rem;
+    }
+    .brand img, .products img, .sales img {
+        width: 20%;
+    }
+    .brand h3, .products h3, .sales h3 {
+        font-size: 2.75rem;
+    }
+    .brand p, .products p, .sales p {
+        font-size: 1.6rem;
+    }
+    .calculadora__section {
+        height: 20rem;
+    }
+    .calculadora__section h2 {
+        font-size: 2.5rem;
+    }
+    .calculadora__btn {
+        font-size: 2rem;
+    }
+    .contact__footer h3 {
+        font-size: 3.25rem;
+    }
+    .contact__footer p {
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+    }
+    .contact__footer a {
+        font-size: 1.6rem;
+    }
+    .copyrigth__footer p {
+        font-size: 1.2rem;
+        line-height: 2.7rem;
+    }
+    .location__footer h4 {
+        font-size: 2.4rem;
+    }
+    .location__footer p {
+        font-size: 1.6rem;
+        line-height: 2.7rem;
+    }
+}
+
+@media (min-width: 3840px){
+    header {
+        padding: 2rem 1rem;
+    }
+    header nav ul {
+        gap: 3rem;
+    }
+    header nav ul li a {
+        font-size: 1.9rem;
+    }
+    .work__btn {
+        padding: 0.6rem 2rem;
+        font-size: 1.8rem;
+    }
+    .hero__section h1 {
+        font-size: 13.5rem;
+    }
+    .hero__section h1 .hero__title-size {
+        font-size: 22rem;
+    }
+    .hero__section h1 sup {
+        font-size: 9rem;
+        margin-left: -10rem;
+    }
+    .icon__boca {
+        top: 35%;
+        left: 13%;
+        width: 12%;
+    }
+    .icon__rayo {
+        top: 8%;
+        right: 15%;
+        width: 12%;
+    }
+    .marqueeTwo {
+        transform: rotate(-2.69deg) translateY(-35%);
+    }
+    .marquee-content li, .marquee-contentTwo li {
+        font-size: 3rem;
+    }
+    .hero__section h2 {
+        font-size: 3.25rem;
+    }
+    .hacemos__section {
+        margin: 4rem 12rem;
+    }
+    .hacemos__text-container {
+        gap: 4rem;
+    }
+    .hacemos__text-container h2 {
+        font-size: 7rem;
+        line-height: 8rem;
+    }
+    .hacemos__text-container p {
+        font-size: 3.3rem;
+        line-height: 4.7rem;
+    }
+    .hacemos__img {
+        width: 70%;
+    }
+    .hacemos__btn {
+        border-radius: 3.8rem;
+        padding: 1rem 3.8rem;
+        font-size: 3.2rem;
+    }
+    .servicios__section h2 {
+        font-size: 7rem;
+        margin: 4rem 13rem;
+    }
+    .servicios__container {
+        margin: 4rem 12rem;
+    }
+    .servicios__tabs {
+        min-height: 60rem;
+    }
+    .servicios__tab {
+        height: 50rem;
+    }
+    .servicios__tab img {
+        width: 10%;
+    }
+    .servicios__tab h3 {
+        font-size: 5.3rem;
+    }
+    .servicios__tab p {
+        font-size: 2.25rem;
+        width: 80%;
+        line-height: 4.7rem;
+    }
+    .servicios__btn-tab {
+        font-size: 2.5rem;
+    }
+    .servicios__btn-tab.active-btn {
+        font-size: 3rem;
+    }
+    .icon__x {
+        right: 2%;
+        top: 20%;
+        width: 12%;
+    }
+    .experiencia__section h2 {
+        font-size: 7rem;
+        margin: 0 12rem;
+    }
+    .swiper {
+        margin: 4rem 12rem;
+    }
+    .swiper-slide {
+        width: 1500px!important;
+    }
+    .overlay__title {
+        font-size: 4.8rem;
+    }
+    .overlay__description {
+        font-size: 3.5rem;
+    }
+    .swiper-pagination span {
+        width: 6.25rem;
+        height: 0.6rem;
+        border-radius: 0.5rem;
+    }
+    .por-que__text-container h2 {
+        font-size: 7rem;
+        line-height: 8rem;
+    }
+    .por-que__text-container p {
+        font-size: 3.3rem;
+        line-height: 4.7rem;
+    }
+    .por-que__text-container {
+        gap: 4rem;
+    }
+    .brand, .products, .sales {
+        height: auto;
+    }
+    .brand img, .products img, .sales img {
+        width: 20%;
+    }
+    .brand h3, .products h3, .sales h3 {
+        font-size: 4.75rem;
+    }
+    .brand p, .products p, .sales p {
+        font-size: 3.25rem;
+    }
+    .calculadora__section {
+        height: 40rem;
+        gap: 4rem;
+    }
+    .calculadora__section h2 {
+        font-size: 5.25rem;
+    }
+    .calculadora__btn {
+        border-radius: 1rem;
+        padding: 1.8rem 8rem;
+        font-size: 3rem;
+    }
+    .calculadora__modal-content {
+        height: 50rem;
+    }
+    .calculadora__modal-title {
+        font-size: 2.5rem;
+    }
+    .calculadora__modal-close {
+        top: 3rem;
+        right: 3rem;
+        font-size: 2.5rem;
+    }
+    .contact__footer h3 {
+        font-size: 5.25rem;
+    }
+    .contact__footer p {
+        font-size: 2.25rem;
+        line-height: 2.7rem;
+    }
+    .contact__footer a {
+        font-size: 2.4rem;
+        line-height: 2.7rem;
+    }
+    .copyrigth__footer p {
+        font-size: 1.8rem;
+        line-height: 4.7rem;
+    }
+    .location__footer h4 {
+        font-size: 3rem;
+    }
+    .location__footer p {
+        font-size: 2.1rem;
+        line-height: 2.7rem;
     }
 }
