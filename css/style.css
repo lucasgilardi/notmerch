@@ -724,6 +724,9 @@ footer{
         top: 25%;
         right: 10%;
     }
+    .swiper-slide {
+        width: 800px!important;
+    }
 }
 @media(max-width: 1700px){
     .icon__boca {
@@ -733,6 +736,9 @@ footer{
     .icon__rayo {
         top: 23%;
         right: 4%;
+    }
+    .swiper-slide {
+        width: 700px!important;
     }
 }
 @media(max-width: 1550px){
@@ -1352,7 +1358,7 @@ footer{
 }
 
 /*2k / 4k*/
-@media (min-width: 2048px){
+@media (min-width: 1921px){
     .icon__boca {
         top: 36%;
         left: 15%;
@@ -1457,7 +1463,7 @@ footer{
     }
 }
 
-@media (min-width: 3840px){
+@media (min-width: 3000px){
     header {
         padding: 2rem 1rem;
     }
@@ -1482,14 +1488,14 @@ footer{
         margin-left: -10rem;
     }
     .icon__boca {
-        top: 35%;
-        left: 13%;
-        width: 12%;
+        top: 44%;
+        left: 4%;
+        width: 15%;
     }
     .icon__rayo {
-        top: 8%;
-        right: 15%;
-        width: 12%;
+        top: 4%;
+        right: 2%;
+        width: 15%;
     }
     .marqueeTwo {
         transform: rotate(-2.69deg) translateY(-35%);
@@ -1511,16 +1517,16 @@ footer{
         line-height: 8rem;
     }
     .hacemos__text-container p {
-        font-size: 3.3rem;
+        font-size: 2.3rem;
         line-height: 4.7rem;
     }
     .hacemos__img {
-        width: 70%;
+        width: 80%;
     }
     .hacemos__btn {
         border-radius: 3.8rem;
         padding: 1rem 3.8rem;
-        font-size: 3.2rem;
+        font-size: 2.2rem;
     }
     .servicios__section h2 {
         font-size: 7rem;
@@ -1565,7 +1571,7 @@ footer{
         margin: 4rem 12rem;
     }
     .swiper-slide {
-        width: 1500px!important;
+        width: 1100px!important;
     }
     .overlay__title {
         font-size: 4.8rem;
@@ -1583,20 +1589,20 @@ footer{
         line-height: 8rem;
     }
     .por-que__text-container p {
-        font-size: 3.3rem;
+        font-size: 2.3rem;
         line-height: 4.7rem;
     }
     .por-que__text-container {
         gap: 4rem;
     }
     .brand, .products, .sales {
-        height: auto;
+        height: 70vh;
     }
     .brand img, .products img, .sales img {
         width: 20%;
     }
     .brand h3, .products h3, .sales h3 {
-        font-size: 4.75rem;
+        font-size: 3.75rem;
     }
     .brand p, .products p, .sales p {
         font-size: 3.25rem;
@@ -1645,5 +1651,35 @@ footer{
     .location__footer p {
         font-size: 2.1rem;
         line-height: 2.7rem;
+    }
+}
+@media (min-width: 3840px){
+    .icon__boca {
+        top: 35%;
+        left: 13%;
+        width: 12%;
+    }
+    .icon__rayo {
+        top: 8%;
+        right: 15%;
+        width: 12%;
+    }
+    .hacemos__text-container p {
+        font-size: 3.3rem;
+    }
+    .hacemos__btn {
+        font-size: 3.2rem;
+    }
+    .hacemos__img {
+        width: 70%;
+    }
+    .swiper-slide {
+        width: 1500px!important;
+    }
+    .por-que__text-container p {
+        font-size: 3.3rem;
+    }
+    .brand h3, .products h3, .sales h3 {
+        font-size: 4.75rem;
     }
 }
