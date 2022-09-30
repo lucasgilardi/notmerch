@@ -860,8 +860,8 @@ footer{
     header .logo a{
         display: flex;
     }
-    .header__logo-mobile{
-        width: 25%;
+    .header__logo-mobile {
+        width: 35%;
     }
     header nav{
         position: fixed;
@@ -1169,6 +1169,7 @@ footer{
     }
     .servicios__tab {
         padding: 1rem 2rem;
+        border-radius: 3rem 3rem 0 0;
     }
     .servicios__tab h3{
         margin-left: 0;
@@ -1224,6 +1225,9 @@ footer{
     }
     .copyrigth__footer{
         text-align: center;
+    }
+    .brand p, .products p, .sales p {
+        line-height: 1.7rem;
     }
     /* .swiper-slide{
         width: 100%!important;
