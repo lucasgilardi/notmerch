@@ -1462,7 +1462,24 @@ footer{
         line-height: 2.7rem;
     }
 }
-
+@media (min-width: 2500px){
+    header nav ul li a {
+        font-size: 1.2rem;
+    }
+    .work__btn {
+        font-size: 1.1rem;
+    }
+    .icon__boca {
+        top: 39%;
+        left: 20%;
+    }
+    .icon__rayo {
+        right: 19%;
+    }
+    .swiper-slide {
+        width: 950px!important;
+    }
+}
 @media (min-width: 3000px){
     header {
         padding: 2rem 1rem;
