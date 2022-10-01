@@ -1489,9 +1489,6 @@ footer{
     .icon__rayo {
         right: 19%;
     }
-    .swiper-slide {
-        width: 950px!important;
-    }
 }
 @media (min-width: 3000px){
     header {
