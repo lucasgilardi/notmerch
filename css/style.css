@@ -644,7 +644,7 @@ header nav ul li a{
     align-items: center;
     justify-content: center;
     padding: 0 1rem;
-    z-index: 1;
+    z-index: 9999;
     opacity: 0;
     visibility: hidden;
     transition: .3s;
@@ -652,10 +652,10 @@ header nav ul li a{
 .calculadora__modal-content{
     position: relative;
     background-color: #fff;
-    height: 28.6rem;
-    width: 60%;
-    padding: 2.5rem;
+    height: calc(100% - 3.5rem);
+    width: 500px;
     border-radius: .5rem;
+    overflow: hidden;
 }
 .calculadora__modal-title{
     font-size: 1.2rem;
@@ -665,7 +665,7 @@ header nav ul li a{
 .calculadora__modal-close{
     position: absolute;
     top: 1rem;
-    right: 2rem;
+    right: 1rem;
     font-size: 1.5rem;
     color: var(--body-text);
     cursor: pointer;
@@ -720,6 +720,10 @@ footer{
 }
 .contact__footer a:nth-child(2){
     margin-left: 1rem;
+}
+.reunion__modal h4{
+    font-size: 1.2rem;
+    padding: 1rem;
 }
 .copyrigth__footer{
     grid-area: copyright;
@@ -1046,6 +1050,8 @@ footer{
     }
     .swiper{
         width: auto;
+        margin-right: 0;
+        padding: 2rem;
     }
     .por-que__section{
         grid-template-columns: 1fr;
@@ -1078,8 +1084,8 @@ footer{
         font-size: 1.2rem;
     }
     .calculadora__modal-content{
-        height: 25rem;
-        width: 90%;
+        width: 100%;
+        height: calc(100% - 2.5rem);
     }
     footer{
         display: flex;
@@ -1095,6 +1101,15 @@ footer{
         gap: 1rem
     }
     .contact__footer a:nth-child(2), .contact__footer a:nth-child(3){
+        margin-left: 0;
+    }
+    .agendar-reunion__btn{
+        color: var(--body-text);
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        display: inline;
+        text-align: left;
+        padding: 0;
         margin-left: 0;
     }
     .location__footer{
@@ -1162,7 +1177,7 @@ footer{
     }
     .hacemos__section{
         gap: 1rem;
-        margin: 3rem 3rem;
+        margin: 1rem 3rem;
     }
     .hacemos__text-container h2{
         font-size: 3rem;
@@ -1231,6 +1246,9 @@ footer{
     .contact__footer h3{
         font-size: 2.8rem;
     }
+    .agendar-reunion__btn{
+        font-size: 1.4rem;
+    }
     .location__footer{
         gap: 2rem;
     }
@@ -1296,6 +1314,9 @@ footer{
     .por-que__text-container h2 {
         font-size: 1.8rem;
         line-height: 3rem;
+    }
+    .reunion__modal h4 span{
+        display: block;
     }
 }
 @media (max-width: 375px){
@@ -1468,6 +1489,9 @@ footer{
     .calculadora__btn {
         font-size: 2rem;
     }
+    .calculadora__modal-content{
+        height: calc(100% - 13.5rem);
+    }
     .contact__footer h3 {
         font-size: 3.25rem;
     }
@@ -1475,7 +1499,7 @@ footer{
         font-size: 1.8rem;
         line-height: 2.7rem;
     }
-    .contact__footer a {
+    .contact__footer a, .agendar-reunion__btn {
         font-size: 1.6rem;
     }
     .copyrigth__footer p {
@@ -1503,6 +1527,9 @@ footer{
     }
     .icon__rayo {
         right: 19%;
+    }
+    .calculadora__modal-content {
+        height: calc(100% - 24.5rem);
     }
 }
 @media (min-width: 3000px){
@@ -1661,8 +1688,13 @@ footer{
         padding: 1.8rem 8rem;
         font-size: 3rem;
     }
+    .agendar-reunion__btn{
+        border-radius: unset;
+        padding: 0;
+        font-size: 2.4rem;
+    }
     .calculadora__modal-content {
-        height: 50rem;
+        height: calc(100% - 40.5rem);
     }
     .calculadora__modal-title {
         font-size: 2.5rem;
@@ -1714,6 +1746,9 @@ footer{
     }
     .hacemos__img {
         width: 70%;
+    }
+    .calculadora__modal-content {
+        height: calc(100% - 70.5rem);
     }
     .por-que__text-container p {
         font-size: 3.3rem;
