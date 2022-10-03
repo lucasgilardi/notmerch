@@ -166,26 +166,29 @@ header nav ul li a{
     transition: .2s;
 }
 .icon__boca:hover, .icon__rayo:hover{
-    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000px;
+    animation-duration: .5s;
+    animation-timing-function: cubic-bezier(0,.23,1,.71);
+    animation-name: headShake;
+    transform-origin:center bottom;
 }
-@keyframes shake {
-    10%, 90% {
-        transform: translate3d(-1px, 0, 0);
+@keyframes headShake {
+    0% {
+      transform: translateX(0);
     }
-
-    20%, 80% {
-        transform: translate3d(2px, 0, 0);
+    12.5% {
+      transform: translateX(-6px) rotateY(-9deg) skewY(1deg);
     }
-
-    30%, 50%, 70% {
-        transform: translate3d(-4px, 0, 0);
+    37.5% {
+      transform: translateX(5px) rotateY(4.5deg) skewY(-1deg);
     }
-
-    40%, 60% {
-        transform: translate3d(4px, 0, 0);
+    62.5% {
+      transform: translateX(-3px) rotateY(-2.25deg) skewY(0);
+    }
+    87.5% {
+      transform: translateX(2px) rotateY(3deg);
+    }
+    100% {
+      transform: translateX(0);
     }
 }
 .scroll-downs {
@@ -467,6 +470,8 @@ header nav ul li a{
     width: 100%;
     height: 100%;
     margin: 4rem;
+    margin-left: 0;
+    padding-left: 4rem;
 }
 .swiper-slide{
     text-align: center;
@@ -649,7 +654,7 @@ header nav ul li a{
     background-color: #fff;
     height: 28.6rem;
     width: 60%;
-    padding: 1.5rem;
+    padding: 2.5rem;
     border-radius: .5rem;
 }
 .calculadora__modal-title{
@@ -660,7 +665,7 @@ header nav ul li a{
 .calculadora__modal-close{
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    right: 2rem;
     font-size: 1.5rem;
     color: var(--body-text);
     cursor: pointer;
@@ -698,12 +703,22 @@ footer{
     font-size: 1.25rem;
     line-height: 1.7rem;
 }
-.contact__footer a{
+.contact__footer a, .agendar-reunion__btn{
     color: var(--body-text);
     font-size: 1.4rem;
     line-height: 1.7rem;
 }
-.contact__footer a:nth-child(2), .contact__footer a:nth-child(3){
+.agendar-reunion__btn{
+    background-color: unset;
+    text-decoration: underline;
+    font-weight: 400;
+    padding: 0;
+    margin-left: 1rem;
+}
+.agendar-reunion__btn:hover{
+    background-color: unset;
+}
+.contact__footer a:nth-child(2){
     margin-left: 1rem;
 }
 .copyrigth__footer{
