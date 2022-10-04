@@ -987,6 +987,9 @@ footer{
         padding: 1rem 3rem;
         height: auto;
     }
+    .servicios__tabs {
+        min-height: 34rem;
+    }
     .servicios__tab img{
         width: 30%;
     }
@@ -1039,9 +1042,6 @@ footer{
     .servicios__btn-tabs.active + .selected::after {
         transform: rotateX(180deg);
         top: -6px;
-    }
-    .experiencia__section{
-        margin: 4rem 0;
     }
     .experiencia__section h2{
         font-size: 3rem;
@@ -1177,7 +1177,7 @@ footer{
     }
     .hacemos__section{
         gap: 1rem;
-        margin: 1rem 3rem;
+        margin: 2rem 3rem;
     }
     .hacemos__text-container h2{
         font-size: 3rem;
@@ -1213,9 +1213,6 @@ footer{
     .icon__x {
         width: 30%;
         top: 2%;
-    }
-    .experiencia__section{
-        margin: 7rem 0 0 0;
     }
     .experiencia__section h2{
         font-size: 2rem;
@@ -1308,15 +1305,18 @@ footer{
     .servicios__section h2 {
         font-size: 1.8rem;
     }
-    .experiencia__section {
-        margin: 9rem 0 0 0;
-    }
+    
     .por-que__text-container h2 {
         font-size: 1.8rem;
         line-height: 3rem;
     }
     .reunion__modal h4 span{
         display: block;
+    }
+}
+@media (max-width: 390px){
+    .servicios__tabs {
+        min-height: 38rem;
     }
 }
 @media (max-width: 375px){
@@ -1353,9 +1353,6 @@ footer{
     .icon__x {
         top: 8%;
     }
-    .experiencia__section {
-        margin: 14rem 0 0 0;
-    }
     .experiencia__section h2 {
         font-size: 1.5rem;
     }
@@ -1380,11 +1377,11 @@ footer{
         padding: 0.4rem 1rem;
         font-size: 1rem;
     }
+    .servicios__tabs {
+        min-height: 41rem;
+    }
     .servicios__btn-tabs.active{
         margin: 0 1rem;
-    }
-    .experiencia__section {
-        margin: 20rem 0 0 0;
     }
 }
 
