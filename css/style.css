@@ -1220,6 +1220,9 @@ footer{
     .por-que__section {
         margin-top: -5rem;
     }
+    .hacemos__section--modifier{
+        margin: 1rem 3rem;
+    }
     .por-que__text-container h2{
         font-size: 2.5rem;
         line-height: 3rem;
