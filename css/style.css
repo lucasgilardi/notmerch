@@ -1050,8 +1050,8 @@ footer{
     }
     .swiper{
         width: auto;
-        margin-right: 0;
-        padding: 2rem;
+        margin: 2.5rem 0 0 0;
+        padding: 0 2rem;
     }
     .por-que__section{
         grid-template-columns: 1fr;
